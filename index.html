@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPT模板预览与下载</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pptxjs@1.21.1/css/pptxjs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meshesha/PPTXjs@2.8.0/dist/css/pptxjs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/office-viewer/dist/office-viewer.min.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">PPT模板库</div>
+            <button class="upload-btn" id="uploadBtn">上传模板</button>
+        </div>
+    </nav>
+
+    <!-- 上传区域 -->
+    <div class="upload-area" id="uploadArea">
+        <div class="upload-box">
+            <img src="assets/upload-icon.svg" alt="上传图标">
+            <p>拖拽PPT文件到���里，或点击上传</p>
+            <p class="upload-tip">支持单个或最多10个PPT文件</p>
+            <input type="file" id="fileInput" multiple accept=".ppt,.pptx" hidden>
+        </div>
+    </div>
+
+    <!-- 预览区域 -->
+    <div class="preview-area" id="previewArea">
+        <h2>预览区域</h2>
+        <div class="preview-grid" id="previewGrid"></div>
+    </div>
+
+    <!-- 下载区域 -->
+    <div class="download-area" id="downloadArea">
+        <div class="selection-info">
+            已选择 <span id="selectedCount">0</span> 页
+        </div>
+        <button class="download-btn" id="downloadBtn" disabled>
+            生成新PPT
+        </button>
+    </div>
+
+    <!-- 添加预览模态框 -->
+    <div class="preview-modal" id="previewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>PPT预览</h3>
+                <button class="close-btn" id="closePreview">&times;</button>
+            </div>
+            <div class="preview-container">
+                <div id="pptx-container"></div>
+                <div class="preview-controls">
+                    <button class="nav-btn" id="prevSlide">上一页</button>
+                    <span class="slide-info">第 <span id="currentSlide">1</span> 页 / �� <span id="totalSlides">1</span> 页</span>
+                    <button class="nav-btn" id="nextSlide">下一页</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加用于生成预览的隐藏容器 -->
+    <div id="preview-container" style="display: none;"></div>
+
+    <!-- 脚本引用 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html> 

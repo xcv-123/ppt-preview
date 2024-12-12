@@ -1,0 +1,417 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1D1D1F;
+    background: #FFFFFF;
+}
+
+/* 导航栏样式 */
+.nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #D2D2D7;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* 按钮样式 */
+.upload-btn {
+    background: #007AFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.upload-btn:hover {
+    background: #0066CC;
+}
+
+/* 上传区域样式 */
+.upload-area {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.upload-box {
+    border: 2px dashed #D2D2D7;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    background: #F5F5F7;
+    transition: border-color 0.2s;
+}
+
+.upload-box:hover {
+    border-color: #007AFF;
+}
+
+.upload-tip {
+    color: #86868B;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* 预览区域样式 */
+.preview-area {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* 下载区域样式 */
+.download-area {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid #D2D2D7;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.download-btn {
+    background: #007AFF;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.download-btn:disabled {
+    background: #D2D2D7;
+    cursor: not-allowed;
+}
+
+/* 预览卡片样式 */
+.preview-card {
+    cursor: pointer;
+}
+
+.preview-thumbnail {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 比例 */
+    background: #F5F5F7;
+    overflow: hidden;
+}
+
+.preview-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.preview-info {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-name {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+/* ��传进度样式 */
+.upload-progress {
+    width: 100%;
+}
+
+.progress-bar {
+    height: 4px;
+    background: #007AFF;
+    width: 0;
+    border-radius: 2px;
+    animation: progress 1.5s ease-in-out;
+}
+
+@keyframes progress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+/* 消息提示样式 */
+.toast-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -20px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* 预览模态框样式 */
+.preview-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 90%;
+    margin: 2% auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #D2D2D7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #86868B;
+}
+
+.preview-container {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+#pptx-container {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+}
+
+.preview-controls {
+    padding: 16px;
+    border-top: 1px solid #D2D2D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-btn {
+    background: #007AFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.nav-btn:disabled {
+    background: #D2D2D7;
+    cursor: not-allowed;
+}
+
+.slide-info {
+    font-size: 14px;
+    color: #1D1D1F;
+}
+
+/* 幻灯片卡片样式 */
+.slide-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.slide-card:hover {
+    transform: translateY(-4px);
+}
+
+.slide-preview {
+    position: relative;
+    width: 100%;
+    padding-top: 40%;
+    background: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pptx-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 保持图片比例 */
+    background: white; /* 如果需要白色背景 */
+}
+
+.pptx-preview .slide {
+    width: 100% !important;
+    height: 100% !important;
+    transform-origin: center;
+    background-color: white;
+}
+
+.checkbox-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+}
+
+.slide-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.slide-info {
+    padding: 8px;
+}
+
+.file-name {
+    font-size: 12px;
+    color: #1D1D1F;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.slide-number {
+    font-size: 11px;
+    color: #86868B;
+}
+
+/* 下载区域样式调整 */
+.selection-info {
+    font-size: 14px;
+    color: #1D1D1F;
+}
+
+.preview-error {
+    color: #FF3B30;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 添加幻灯片内容样式 */
+.slide-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.shape {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* 调整预览容器大小 */
+.pptx-preview {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 确保图片不会溢出容器 */
+.pptx-preview img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Office Viewer 样式调整 */
+.pptx-preview .office-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+.pptx-preview .office-viewer canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+} 
