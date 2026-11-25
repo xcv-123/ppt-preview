@@ -598,6 +598,302 @@
     line-height: 1.3;
   }
 
+
+  /* SCRM case — layered architecture (合力亿捷 reference) */
+  .page-scrm {
+    padding: 11px 18px 12px;
+    gap: 5px;
+  }
+  .page-scrm h1 { font-size: 16.5px; margin-top: 0; }
+  .page-scrm .who { font-size: 10.5px; }
+  .scrm-intro {
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: var(--ink2);
+    margin: 0;
+  }
+  .scrm-intro .case-line {
+    color: var(--gd);
+    font-weight: 750;
+    font-size: 12.5px;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .scrm-intro b { color: var(--gd); font-weight: 750; }
+  .scrm-main {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 8px;
+  }
+  .scrm-panel {
+    border: 1.5px solid var(--g);
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .scrm-panel .phd {
+    background: var(--gd);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: .04em;
+  }
+  .scrm-panel .pbd {
+    padding: 7px 8px 8px;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .arch {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .arch-ch-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .arch-ch-wrap .ch-lab {
+    font-size: 10px;
+    font-weight: 750;
+    color: var(--gd);
+    letter-spacing: .06em;
+  }
+  .arch-ch {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+  }
+  .arch-ch .ci {
+    background: #fff;
+    border: 1px solid var(--g);
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 2px 4px;
+    font-size: 10px;
+    font-weight: 650;
+    color: var(--gd);
+    line-height: 1.2;
+  }
+  .arch-ch .ci span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 0 auto 2px;
+    border-radius: 50%;
+    background: var(--gs);
+    border: 1px solid var(--gm);
+    font-size: 10px;
+    line-height: 16px;
+    color: var(--g);
+  }
+  .arch-stack {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 5px;
+  }
+  .arch-labs {
+    display: grid;
+    grid-template-rows: 1.15fr 0.95fr 0.75fr;
+    gap: 4px;
+  }
+  .arch-labs span {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background: var(--gd);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: .12em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0;
+  }
+  .arch-body {
+    display: grid;
+    grid-template-rows: 1.15fr 0.95fr 0.75fr;
+    gap: 4px;
+    min-height: 0;
+  }
+  .arch-app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+    min-height: 0;
+  }
+  .arch-box {
+    background: #f3f9f5;
+    border: 1px solid var(--gm);
+    border-radius: 5px;
+    padding: 4px 5px;
+    min-height: 0;
+  }
+  .arch-box .t {
+    font-size: 10.5px;
+    font-weight: 750;
+    color: var(--gd);
+    margin-bottom: 2px;
+  }
+  .arch-box ul {
+    margin: 0;
+    padding-left: 1em;
+    font-size: 10px;
+    line-height: 1.3;
+    color: var(--ink2);
+  }
+  .arch-plat {
+    background: linear-gradient(180deg, #e8f4ec, #f7fbf8);
+    border: 1px solid var(--g);
+    border-radius: 5px;
+    padding: 4px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-height: 0;
+  }
+  .arch-plat .bar {
+    background: var(--g);
+    color: #fff;
+    text-align: center;
+    font-size: 10.5px;
+    font-weight: 750;
+    border-radius: 3px;
+    padding: 3px 6px;
+  }
+  .arch-plat .buckets {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+  }
+  .arch-plat .bk {
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 4px;
+    padding: 3px 4px;
+    font-size: 10px;
+    line-height: 1.25;
+    color: var(--ink2);
+    text-align: center;
+  }
+  .arch-plat .bk b {
+    display: block;
+    color: var(--gd);
+    font-size: 10.5px;
+    margin-bottom: 1px;
+  }
+  .arch-cap {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 3px;
+    align-items: center;
+  }
+  .arch-cap .cp {
+    background: #fff;
+    border: 1.5px solid var(--g);
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px 4px;
+  }
+  .arch-cap .cp .n {
+    font-size: 11px;
+    font-weight: 750;
+    color: var(--gd);
+  }
+  .arch-cap .cp .d {
+    font-size: 9.5px;
+    color: var(--ink3);
+    margin-top: 1px;
+    line-height: 1.2;
+  }
+  .arch-cap .plus {
+    color: var(--g);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .scrm-res {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .scrm-method {
+    background: #f5f7f6;
+    border-radius: 6px;
+    padding: 6px 7px 7px;
+  }
+  .scrm-method .lab {
+    font-size: 11px;
+    font-weight: 750;
+    color: var(--gd);
+    margin-bottom: 5px;
+  }
+  .scrm-method .cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+  }
+  .scrm-method .col .h {
+    font-size: 11px;
+    font-weight: 750;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .scrm-method .col p {
+    margin: 0;
+    font-size: 10.5px;
+    line-height: 1.3;
+    color: var(--ink2);
+  }
+  .scrm-effect {
+    background: var(--gs);
+    border: 1px solid var(--gm);
+    border-radius: 6px;
+    padding: 7px 8px;
+    flex: 1;
+    min-height: 0;
+  }
+  .scrm-effect .lab {
+    font-size: 11px;
+    font-weight: 750;
+    color: var(--gd);
+    margin-bottom: 4px;
+  }
+  .scrm-effect p {
+    margin: 0;
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: var(--ink2);
+  }
+  .scrm-effect b {
+    color: var(--gd);
+    font-weight: 750;
+  }
+  .scrm-foot {
+    margin: 0;
+    font-size: 9.5px;
+    color: var(--ink3);
+    line-height: 1.3;
+  }
+
   .matrix {
     flex: 1;
     min-height: 0;
@@ -1073,7 +1369,7 @@
   </div>
 </section>
 
-<section class="page page-case">
+<section class="page page-case page-scrm">
   <header class="top">
     <div>
       <div class="kicker">04　专业案例 · 我对关键问题的拆解</div>
@@ -1087,70 +1383,107 @@
   </header>
   <hr class="rule">
 
-  <div class="pain-intro">
-    <div class="lab">背景与业务痛点</div>
-    <p class="bg">售后咨询与跟进长期依赖一对一沟通和个人经验；门店管家、总部管家、服务运营入口割裂，信息不在同一会话，重复咨询与漏跟进并存。</p>
-    <div class="pain-grid">
-      <div class="pain-item"><div class="n">痛点 1 · 车主入口</div><p>车主找不到稳定服务入口，问得到人难、体验碎片化。</p></div>
-      <div class="pain-item"><div class="n">痛点 2 · 门店协同</div><p>门店跟进难协同、难留痕，跨角色靠人肉同步。</p></div>
-      <div class="pain-item"><div class="n">痛点 3 · 服务运营</div><p>权限、自动化与质检难做，重复咨询吃掉管家产能。</p></div>
-    </div>
-  </div>
+  <p class="scrm-intro">
+    <span class="case-line">零跑服务 SCRM：专属服务群 + 自动化，把车主售后从「问得到人」做成可运营系统能力</span>
+    售后咨询与跟进长期依赖一对一沟通和个人经验；门店管家、总部管家、服务运营入口割裂，信息不在同一会话。核心痛点：① <b>车主找不到稳定服务入口</b>，体验碎片化；② <b>门店跟进难协同、难留痕</b>，跨角色靠人肉同步；③ <b>重复咨询吃掉管家产能</b>，权限 / 自动化 / 质检难做；④ <b>响应与待办不可量化</b>，漏跟进难以及时发现。
+  </p>
 
-  <div class="case-main">
-    <section class="panel">
-      <div class="panel-hd">服务 SCRM 解决方案 · 业务流</div>
-      <div class="panel-bd">
-        <div class="sol-flow">
-          <div class="sol-col">
-            <div class="ttl">渠道入口</div>
-            <div class="ch">车主<br><em style="font-style:normal;font-weight:500;color:var(--ink3);font-size:10px;">APP / 专属群</em></div>
-            <div class="ch">门店管家</div>
-            <div class="ch">总部管家</div>
-            <div class="ch">服务运营</div>
+  <div class="scrm-main">
+    <section class="scrm-panel">
+      <div class="phd">解决方案</div>
+      <div class="pbd">
+        <div class="arch">
+          <div class="arch-ch-wrap">
+            <div class="ch-lab">全渠道接入</div>
+            <div class="arch-ch">
+              <div class="ci"><span>●</span>车主 APP</div>
+              <div class="ci"><span>●</span>专属服务群</div>
+              <div class="ci"><span>●</span>门店管家</div>
+              <div class="ci"><span>●</span>总部管家</div>
+              <div class="ci"><span>●</span>服务运营</div>
+            </div>
           </div>
-          <div class="sol-arrow">→</div>
-          <div class="sol-col agents">
-            <div class="ttl">场景能力</div>
-            <div class="ch">自动建群</div>
-            <div class="ch">待办协同</div>
-            <div class="ch">自动化触发</div>
-            <div class="ch">知识问答</div>
-          </div>
-          <div class="sol-arrow">→</div>
-          <div class="sol-col" style="padding:0;background:transparent;border:0;">
-            <div class="mod-grid" style="height:100%;">
-              <div class="mod"><div class="mh">专属服务群</div><p>答不上来自动建群，拉入门店 / 总部管家 / 店长，一对多服务。</p></div>
-              <div class="mod"><div class="mh">运营闭环</div><p>权限、待办、工单留痕；移动端跟进，敏感场景可建单。</p></div>
-              <div class="mod"><div class="mh">五项自动化</div><p>重复咨询与状态触发自动化，把管家时间留给复杂问题。</p></div>
-              <div class="mod"><div class="mh">群机器人</div><p>可独立回复常见问题；充电等场景可接 RAG 知识回答。</p></div>
+          <div class="arch-stack">
+            <div class="arch-labs">
+              <span>应用层</span>
+              <span>平台层</span>
+              <span>能力层</span>
+            </div>
+            <div class="arch-body">
+              <div class="arch-app">
+                <div class="arch-box">
+                  <div class="t">专属服务群</div>
+                  <ul>
+                    <li>自动建群</li>
+                    <li>一对多服务</li>
+                    <li>拉入门店 / 总部 / 店长</li>
+                  </ul>
+                </div>
+                <div class="arch-box">
+                  <div class="t">运营协同</div>
+                  <ul>
+                    <li>权限与待办</li>
+                    <li>工单留痕</li>
+                    <li>移动端跟进</li>
+                  </ul>
+                </div>
+                <div class="arch-box">
+                  <div class="t">智能运营</div>
+                  <ul>
+                    <li>五项自动化</li>
+                    <li>群机器人</li>
+                    <li>敏感场景建单</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="arch-plat">
+                <div class="bar">服务 SCRM 中台 · 会话 / 待办 / 工单统一</div>
+                <div class="buckets">
+                  <div class="bk"><b>数据沉淀</b>会话与跟进可视化</div>
+                  <div class="bk"><b>实时协同</b>跨角色同屏跟进</div>
+                  <div class="bk"><b>质检闭环</b>自动化触发可追踪</div>
+                </div>
+              </div>
+              <div class="arch-cap">
+                <div class="cp"><div class="n">自动化引擎</div><div class="d">状态触发 · 重复咨询</div></div>
+                <div class="plus">+</div>
+                <div class="cp"><div class="n">知识中心</div><div class="d">RAG · 充电问答</div></div>
+                <div class="plus">+</div>
+                <div class="cp"><div class="n">业务集成</div><div class="d">APP · 工单 · 门店</div></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="panel">
-      <div class="panel-hd">案例成果 · 数据 + 业务</div>
-      <div class="panel-bd">
-        <div class="res-block">
-          <div class="lab">客户 / 业务痛点（摘要）</div>
-          <p>入口割裂、协同靠人、重复咨询多——需要把「问得到、跟得上」做成 SCRM 系统能力。</p>
+    <section class="scrm-panel">
+      <div class="phd">应用成果 · 车主服务 SCRM</div>
+      <div class="pbd">
+        <div class="scrm-res">
+          <div class="scrm-method">
+            <div class="lab">解决方法描述</div>
+            <div class="cols">
+              <div class="col">
+                <div class="h">统一服务入口</div>
+                <p>车主进专属服务群；答不上来自动建群，门店与总部同屏。</p>
+              </div>
+              <div class="col">
+                <div class="h">人机协同运营</div>
+                <p>五项自动化覆盖重复咨询；管家只处理复杂问题。</p>
+              </div>
+              <div class="col">
+                <div class="h">知识与机器人</div>
+                <p>群机器人可独立回复；充电等场景接 RAG 知识回答。</p>
+              </div>
+            </div>
+          </div>
+          <div class="scrm-effect">
+            <div class="lab">达成效果描述</div>
+            <p>通过服务 SCRM，把售后从人肉跟进升级为可运营系统：自动化立项 <b>ROI 7.1</b>（投入 4.4 万 / 22 人天）；响应目标由 <b>5′ → 2″</b>，覆盖约 <b>70%</b> 重复咨询；待办及时率目标 <b>60% → 95%</b>，工单处理目标 <b>30′ → 1′</b>，漏跟进可在分钟级发现。</p>
+          </div>
+          <p class="scrm-foot">注：响应等数字为方案内基线 / 目标或立项测算，答辩时按当期看板校准。</p>
         </div>
-        <div class="res-block">
-          <div class="lab">达成效果描述</div>
-          <ol>
-            <li><b>入口统一：</b>车主进专属服务群，门店与总部同屏协同。</li>
-            <li><b>服务产品化：</b>自动建群 + 一对多 + 机器人，减少人肉跟进。</li>
-            <li><b>效率可量化：</b>自动化立项测算清晰，响应与待办目标可追踪。</li>
-          </ol>
-        </div>
-        <div class="metrics">
-          <div class="metric"><div class="v">7.1</div><div class="l">自动化立项 ROI<br>投入 4.4 万 / 22 人天</div></div>
-          <div class="metric"><div class="v">5′→2″</div><div class="l">响应目标<br>覆盖 70% 重复咨询</div></div>
-          <div class="metric"><div class="v">60→95%</div><div class="l">待办及时率目标<br>工单 30′→1′</div></div>
-        </div>
-        <p class="case-foot">注：响应等数字为方案内基线 / 目标或立项测算，答辩时按当期看板校准。</p>
       </div>
     </section>
   </div>
