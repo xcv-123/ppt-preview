@@ -254,21 +254,18 @@
     letter-spacing: .03em;
     line-height: 1.35;
   }
-  .mx-cell .chip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin: 0 0 2px;
-  }
-  .mx-cell .chip span {
+  .mx-cell .do .k {
+    display: inline-block;
     font-size: 10.5px;
-    line-height: 1.25;
+    line-height: 1.2;
     color: var(--gd);
     background: var(--gs);
     border: 1px solid var(--gm);
     border-radius: 3px;
-    padding: 2px 6px;
-    font-weight: 650;
+    padding: 1px 5px;
+    font-weight: 700;
+    margin-right: 4px;
+    vertical-align: 1px;
   }
   .mx-cell.empty {
     align-items: center;
@@ -438,7 +435,7 @@
     </div>
     <div class="who">
       <b>LEAPMOTOR</b>
-      每格：场景 → 我做了什么（标签 + 序号）→ 满意度<br>
+      每格：场景 → 我做了什么（标签. 动作）→ 满意度<br>
       共用能力：年终报告、创作者、UGC 公域同步、AI 搜索
     </div>
   </header>
@@ -461,26 +458,14 @@
     <div class="mx-cell">
       <div class="scene">场景 · 看车、看口碑、被公域内容种草，并完成留资 / 接受邀请 / 注册试驾</div>
       <p class="do-label">我做了什么</p>
-      <div class="chip">
-        <span>查看口碑</span>
-        <span>年终报告</span>
-        <span>创作者活动</span>
-        <span>UGC→抖音/小红书</span>
-        <span>AI 搜索</span>
-        <span>注册渠道 2.0</span>
-        <span>转介绍接受页</span>
-        <span>登录浮层</span>
-        <span>线索下发</span>
-        <span>隐私合规</span>
-      </div>
       <ol class="do">
-        <li>口碑取消问卷，改抓汽车之家：1.0 精简维度 → 2.0 抓取 → 3.0 统一历史口径，让潜客直接查看真实口碑。</li>
-        <li>创作者平台开放潜客参与；UGC 可同步抖音 / 小红书。</li>
-        <li>引入 AI 搜索 / 充电 RAG，搜索热度可配；年终报告可生成与分享。</li>
-        <li>专题页 uid / openid 溯源，分享组件统一。</li>
-        <li>注册渠道覆盖 9 类场景，线索是否下发零小跑改为后台可配。</li>
-        <li>接受邀请页先勾隐私再发验证码；登录浮层按渠道管理并可看 PV / UV。</li>
-        <li>邀请码「6 个月未留资」改为按注册时间起算；转介绍首页改任务中心并支持商品券。</li>
+        <li><span class="k">查看口碑</span>口碑取消问卷，改抓汽车之家：1.0 精简维度 → 2.0 抓取 → 3.0 统一历史口径，让潜客直接查看真实口碑。</li>
+        <li><span class="k">创作者活动</span>创作者平台开放潜客参与；UGC 可同步抖音 / 小红书。</li>
+        <li><span class="k">AI 搜索</span>引入 AI 搜索 / 充电 RAG，搜索热度可配；年终报告可生成与分享。</li>
+        <li><span class="k">分享溯源</span>专题页 uid / openid 溯源，分享组件统一。</li>
+        <li><span class="k">注册渠道 2.0</span>注册渠道覆盖 9 类场景，线索是否下发零小跑改为后台可配。</li>
+        <li><span class="k">转介绍接受页</span>接受邀请页先勾隐私再发验证码；登录浮层按渠道管理并可看 PV / UV。</li>
+        <li><span class="k">转介绍任务</span>邀请码「6 个月未留资」改为按注册时间起算；转介绍首页改任务中心并支持商品券。</li>
       </ol>
       <p class="sat"><b>满意度：</b>少被二次问卷打扰，公域真实口碑与内容更多；搜得到、看得真，从公域回流路径清楚；留资后跟进更准，隐私提示清楚，不同入口体验一致，少被错误标签和无效激励误伤。</p>
     </div>
@@ -496,42 +481,24 @@
     <div class="mx-cell soft">
       <div class="scene">场景 · 转介绍邀友、公域发帖帮品牌种草</div>
       <p class="do-label">我做了什么</p>
-      <div class="chip">
-        <span>转介绍</span>
-        <span>创作者活动</span>
-        <span>UGC→抖音/小红书</span>
-        <span>年终报告</span>
-        <span>AI 搜索</span>
-        <span>海报素材库</span>
-      </div>
       <ol class="do">
-        <li>转介绍海报五版到个人素材库；奖励改为绑车核销保养券；试驾车绑车人取消邀请资格。</li>
-        <li>创作者平台从 0 到 1，再到申诉、AI 审贴、分层配额。</li>
-        <li>UGC 可同步抖音 / 小红书。</li>
-        <li>年终报告可生成 / 分享 / 抽奖；站内亦可 AI 搜索。</li>
+        <li><span class="k">转介绍</span>转介绍海报五版到个人素材库；奖励改为绑车核销保养券；试驾车绑车人取消邀请资格。</li>
+        <li><span class="k">创作者活动</span>创作者平台从 0 到 1，再到申诉、AI 审贴、分层配额。</li>
+        <li><span class="k">UGC→抖音/小红书</span>UGC 可同步抖音 / 小红书。</li>
+        <li><span class="k">年终报告</span>年终报告可生成 / 分享 / 抽奖；站内亦可 AI 搜索。</li>
       </ol>
       <p class="sat"><b>满意度：</b>愿意邀、放心邀；发帖规范清楚、可申诉、不通过有理由；认真分享的人少被羊毛党挤占；有内容可发、有成绩可晒。</p>
     </div>
     <div class="mx-cell">
       <div class="scene">场景 · 学功能、开权限，并持续参与活动；自动进入专属服务群，享受一对多服务</div>
       <p class="do-label">我做了什么</p>
-      <div class="chip">
-        <span>创作者活动</span>
-        <span>转介绍活动</span>
-        <span>车主课堂</span>
-        <span>口碑发布</span>
-        <span>功能解锁</span>
-        <span>专属服务群</span>
-        <span>一对多服务</span>
-        <span>充电 RAG</span>
-      </div>
       <ol class="do">
-        <li>售后可持续参与创作者活动、转介绍活动、车主课堂与口碑发布。</li>
-        <li>课堂改为逐题反馈；功能 code 可多选推送；试驾车企微批量解锁最多 2000 台。</li>
-        <li>服务管家 IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长，形成一对多专属服务。</li>
-        <li>叠加运营闭环、移动端、五项自动化与群机器人。</li>
-        <li>充电手册 / 资讯 / 素材做成 RAG；会话带维修记录，客户主体改为 vin。</li>
-        <li>注销按身份核验；鸿蒙入口对齐。</li>
+        <li><span class="k">创作者活动</span>售后可持续参与创作者活动、转介绍活动、车主课堂与口碑发布。</li>
+        <li><span class="k">车主课堂</span>课堂改为逐题反馈；功能 code 可多选推送；试驾车企微批量解锁最多 2000 台。</li>
+        <li><span class="k">专属服务群</span>服务管家 IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长，形成一对多专属服务。</li>
+        <li><span class="k">一对多服务</span>叠加运营闭环、移动端、五项自动化与群机器人。</li>
+        <li><span class="k">充电 RAG</span>充电手册 / 资讯 / 素材做成 RAG；会话带维修记录，客户主体改为 vin。</li>
+        <li><span class="k">账号合规</span>注销按身份核验；鸿蒙入口对齐。</li>
       </ol>
       <p class="sat"><b>满意度：</b>学功能即时知道对错，功能开通更快；问得到人、跟得上进度、答得清充电，同时仍能发帖、邀友、学功能、发口碑。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
     </div>
