@@ -115,29 +115,67 @@
   .sec h3 { margin: 0; font-size: 13px; font-weight: 700; }
   .sec span { font-size: 11px; color: var(--ink3); }
 
-  .six { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 7px; }
-  .card {
-    border: 1px solid var(--gm);
-    border-radius: 7px;
-    padding: 8px 9px 9px;
-    background: #fff;
+  .two {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .pillar {
+    border: 1px solid var(--g);
+    border-radius: 8px;
+    background: #f3faf6;
     display: flex;
     flex-direction: column;
     min-width: 0;
+    overflow: hidden;
   }
-  .card.head { display: flex; align-items: center; justify-content: space-between; gap: 4px; }
-  .intent { font-size: 13.5px; font-weight: 750; color: var(--gd); }
-  .flag {
-    font-size: 10px;
+  .pillar-hd {
+    background: var(--gd);
     color: #fff;
-    background: var(--g);
-    border-radius: 3px;
-    padding: 1px 4px;
-    font-weight: 650;
+    padding: 7px 12px 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
   }
-  .biz { margin: 3px 0 4px; font-size: 11px; color: var(--g); font-weight: 650; line-height: 1.35; }
-  .work { margin: 0; font-size: 12px; line-height: 1.48; color: var(--ink2); }
-  .card.main { background: #f3faf6; border-color: var(--g); }
+  .pillar-hd .intent { font-size: 12px; letter-spacing: .08em; font-weight: 650; opacity: .88; }
+  .pillar-hd h3 { margin: 2px 0 0; font-size: 15px; font-weight: 750; line-height: 1.25; }
+  .pillar-hd .flag {
+    flex-shrink: 0;
+    font-size: 10px;
+    color: var(--gd);
+    background: #fff;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .pillar-bd {
+    padding: 8px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+  }
+  .why { margin: 0; font-size: 12px; line-height: 1.45; color: var(--ink2); }
+  .lines { display: grid; gap: 5px; }
+  .line {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+  .line .tag {
+    font-size: 11px;
+    font-weight: 750;
+    color: var(--gd);
+    line-height: 1.35;
+    padding-top: 1px;
+  }
+  .line p { margin: 0; font-size: 12px; line-height: 1.42; color: var(--ink2); }
+  .line b { color: var(--ink); font-weight: 680; }
 
   .control {
     display: grid;
@@ -170,12 +208,14 @@
   }
   .year b { display: block; font-size: 12px; margin-bottom: 2px; }
   .year p { margin: 0; font-size: 12px; line-height: 1.48; color: var(--ink2); }
+  .spines { display: grid; gap: 6px; }
   .spine {
     display: grid;
-    grid-template-columns: 64px repeat(6, 1fr);
+    grid-template-columns: 72px repeat(4, 1fr);
     gap: 5px;
     align-items: stretch;
   }
+  .spine.im { grid-template-columns: 72px repeat(6, 1fr); }
   .spine .name {
     font-size: 11px;
     font-weight: 700;
@@ -271,77 +311,107 @@
   <div class="roof">
     <div class="lab">战略愿景</div>
     <h2>成为驱动零跑全球增长的核心智能引擎，构建超百万级用户与伙伴共赢的数智生态。</h2>
-    <p>我的范围在营销运营：车主服务、社区内容、转介绍。这两年把已经存在的用户、车辆和服务数据用进会话、审核和搜索，并把原来靠人记住的动作写成规则。</p>
+    <p>两年工作只对两条业务组合：公域投放效率、车主服务。前者靠用户在公域发帖形成内容供给；后者靠服务管家 IM 把售后协同做成可自动运转的子系统。</p>
   </div>
 
   <div class="stats">
     <div class="stat"><span class="n">85</span><span class="l">份方案进入评审或上线<br>2025 年 48 份，2026 年去重 37 份</span></div>
-    <div class="stat"><span class="n">2</span><span class="l">条连续主责的子系统<br>服务管家 IM、创作者平台</span></div>
+    <div class="stat"><span class="n">2</span><span class="l">条业务组合上的主线<br>公域投放 · 车主服务</span></div>
     <div class="stat"><span class="n">3</span><span class="l">处写清边界的 AI<br>审贴、充电 RAG、群机器人</span></div>
-    <div class="stat"><span class="n">6</span><span class="l">个端同时交付<br>APP、小程序、H5、鸿蒙、PC、企微</span></div>
+    <div class="stat"><span class="n">6</span><span class="l">个公域分发平台<br>抖音、小红书、汽车之家等</span></div>
   </div>
 
   <div class="sec">
-    <h3>战略意图 × 业务组合 × 我的落点</h3>
-    <span>主责在「助决策 · 提升车主服务」，其余五格是同期实际交付的范围。</span>
+    <h3>业务组合上的落点</h3>
+    <span>对应战略意图「强体验」与「助决策」。其余业务组合不在这两年的主责范围。</span>
   </div>
 
-  <div class="six">
-    <article class="card">
-      <div class="head"><span class="intent">强体验</span></div>
-      <p class="biz">提升公域投放效率</p>
-      <p class="work">交付在线上体验。搜索热度可配，话题和个人主页可搜；鸿蒙扫一扫与「我的」对齐；分享收成一套渠道矩阵。公域投放效率不在这两年的交付里。</p>
+  <div class="two">
+    <article class="pillar">
+      <div class="pillar-hd">
+        <div>
+          <div class="intent">强体验</div>
+          <h3>提升公域投放效率</h3>
+        </div>
+        <span class="flag">内容供给</span>
+      </div>
+      <div class="pillar-bd">
+        <p class="why">公域投放要的不是多开一个站内频道，而是让车主和创作者愿意、并能稳定地在抖音、小红书、汽车之家等公域发帖。两年做的是从 0 到 1 把这条供给链建起来，再让审核和采集自己运转。</p>
+        <div class="lines">
+          <div class="line">
+            <div class="tag">创作者平台</div>
+            <p><b>2025 从 0 到 1</b>：达人招募、任务、奖励、站外发帖覆盖抖音 / 小红书 / 汽车之家 / 懂车帝 / 头条 / 微博。<b>2026 主投入 13 份</b>：OCR、申诉、AI 自动审核、开放普通用户、分层报名配额、数皆看板与补推。</p>
+          </div>
+          <div class="line">
+            <div class="tag">口碑生产</div>
+            <p>问卷二次打扰改为抓汽车之家口碑：1.0 精简维度，2.0 取消问卷改抓取，3.0 按 9 月 17 日前后统一历史口径。指标从回收量改为点评量、单条处理耗时、详情转化。</p>
+          </div>
+          <div class="line">
+            <div class="tag">对外投放</div>
+            <p>UGC 可同步抖音与小红书；分享组件统一；专题页用 uid / openid 溯源；登录浮层按渠道管理，并可按渠道看 PV / UV。让公域帖能回到站内，也能量得出投放效果。</p>
+          </div>
+          <div class="line">
+            <div class="tag">供给风控</div>
+            <p>未传截图占 36.66% 时先补上传规范；审核顺序定为运营、规则、AI；按人群限制单日报名名额，避免羊毛党挤占公域活动名额。</p>
+          </div>
+        </div>
+      </div>
     </article>
-    <article class="card">
-      <div class="head"><span class="intent">固流程</span></div>
-      <p class="biz">提升潜客到店率</p>
-      <p class="work">把线索「发不发、发给谁」做成可配置流程。注册渠道 2.0 覆盖 9 类场景；转介绍按车型控制是否下发零小跑，并可重推；D19 过滤留资门店；邀请码起算改为注册时间。</p>
-    </article>
-    <article class="card">
-      <div class="head"><span class="intent">降成本</span></div>
-      <p class="biz">提升到店转化率</p>
-      <p class="work">先去掉无效激励。转介绍奖励改为绑车才能核销的保养券；试驾车绑车人取消邀请资格；创作者按人群限制单日报名名额。到店转化率不是这两年的主指标。</p>
-    </article>
-    <article class="card">
-      <div class="head"><span class="intent">提效率</span></div>
-      <p class="biz">提升车辆流转和交付效率</p>
-      <p class="work">效率发生在车端功能和服务响应。试驾车用企微批量解锁，单次最多 2000 台；功能 code 可多选并推到零云。整车物流和交付流转不在这条线。</p>
-    </article>
-    <article class="card main">
-      <div class="head"><span class="intent">助决策</span><span class="flag">主责</span></div>
-      <p class="biz">提升车主服务</p>
-      <p class="work">服务管家 IM 从自动建群做到五项自动化和群机器人。充电问题用手册、资讯和 IM 素材做 RAG。口碑取消问卷，改抓汽车之家，指标改为点评量、处理耗时和详情转化。</p>
-    </article>
-    <article class="card">
-      <div class="head"><span class="intent">控风险</span></div>
-      <p class="biz">渠道覆盖率 · 线上触点体验</p>
-      <p class="work">控的是内容、激励和 AI 误答。风控补到可重置；注销按身份核验；审核顺序定为运营、规则、AI。触点覆盖六个端，并可同步抖音、小红书等站外。经销商网络覆盖不在这条线。</p>
+
+    <article class="pillar">
+      <div class="pillar-hd">
+        <div>
+          <div class="intent">助决策</div>
+          <h3>提升车主服务</h3>
+        </div>
+        <span class="flag">主责子系统</span>
+      </div>
+      <div class="pillar-bd">
+        <p class="why">车主服务的核心是服务管家 IM：用户在 APP 里问得到人，门店和总部跟得上，重复咨询由系统先答。同一条主线从自动建群叠到自动化和群机器人，不另起炉灶。</p>
+        <div class="lines">
+          <div class="line">
+            <div class="tag">服务 IM</div>
+            <p>一期自动建群与三级权限 → 二期运营闭环 → 移动端 → 大区 / 小区权限与根因修复 → 五项自动化（第一次写 ROI）→ 群机器人可独立回复。</p>
+          </div>
+          <div class="line">
+            <div class="tag">充电问答</div>
+            <p>手册充电章节、充电资讯、IM 素材做成 RAG。只答充电；高压用电、费用、需到店诊断、改装破解使用固定拒绝话术。置信度不足就不答。</p>
+          </div>
+          <div class="line">
+            <div class="tag">服务效率</div>
+            <p>敏感词自动建单、跟进单强制截图、推送按订单 / 充电桩状态触发。试驾车用企微批量解锁功能，单次最多 2000 台，减少门店重复答题。</p>
+          </div>
+          <div class="line">
+            <div class="tag">数据主体</div>
+            <p>客户主体从 uid 改为 vin；工单带触发前后各 20 条群消息；会话直接调用用户信息、销服维修记录和素材库，让管家决策有据。</p>
+          </div>
+        </div>
+      </div>
     </article>
   </div>
 
   <div class="control">
     <div class="rail">战略<br>控制点</div>
-    <p><strong>夯实数据底座，用 AI 赋能提效和决策；洞悉业务本质，做成顾问式产品能力；建成数字化组织壁垒。</strong> 我的承接放在第 2 页三个破局点：会话和知识把已有数据用起来，诊断结构用来发起价值项目，标准和权责用来减少个人补位。</p>
+    <p><strong>夯实数据底座，用 AI 赋能提效和决策；洞悉业务本质，做成顾问式产品能力；建成数字化组织壁垒。</strong> 公域侧用审贴 AI 和数皆采集把内容供给跑稳；服务侧用会话、RAG 和 ROI 立项把车主问题答清楚。承接打法见第 2 页。</p>
   </div>
 
-  <div class="years">
-    <div class="year">
-      <b>2025 · 铺能力</b>
-      <p>48 份方案，四条线同时推进。服务 IM 完成从 0 到 1、运营闭环和移动端；转介绍收成防作弊和可分享的物料；社区补上风控、搜索和创作者中心；注销、鸿蒙、注册渠道这些底层欠账补齐。</p>
+  <div class="spines">
+    <div class="spine">
+      <div class="name">公域供给</div>
+      <div class="node"><div class="when">2025.02–05</div><div class="what">创作者中心 1.0</div><div class="sub">站外发帖与招募从 0 到 1</div></div>
+      <div class="node"><div class="when">2025.02–11</div><div class="what">风控与同步</div><div class="sub">公域内容可拦、可重置、可外发</div></div>
+      <div class="node"><div class="when">2026.04–05</div><div class="what">审核闭环</div><div class="sub">申诉、规范、AI 审、开放人群</div></div>
+      <div class="node"><div class="when">2026.04–11</div><div class="what">口碑与配额</div><div class="sub">取消问卷、抓公域、分层报名</div></div>
     </div>
-    <div class="year">
-      <b>2026 · 收自动化　截至 11 月 20 日</b>
-      <p>去重后 37 份。创作者平台 13 份，从申诉和自动审核做到分层配额；服务 IM 按大区 / 小区重构权限，并第一次用 ROI 立项；搜索只把充电场景做成 RAG，拒答写进方案。</p>
+    <div class="spine im">
+      <div class="name">服务 IM</div>
+      <div class="node"><div class="when">2025.03</div><div class="what">自动建群</div><div class="sub">APP 内问不到人时拉入三方管家</div></div>
+      <div class="node"><div class="when">2025.08</div><div class="what">运营闭环</div><div class="sub">跟进、排班、异常可以运营</div></div>
+      <div class="node"><div class="when">2025.12</div><div class="what">移动端</div><div class="sub">离开电脑不再漏掉待办</div></div>
+      <div class="node"><div class="when">2026.06–08</div><div class="what">组织与根因</div><div class="sub">按大区小区和维保能力管辖</div></div>
+      <div class="node"><div class="when">2026.10</div><div class="what">五项自动化</div><div class="sub">第一次把 ROI 写进立项</div></div>
+      <div class="node"><div class="when">2026.11</div><div class="what">群机器人</div><div class="sub">从回答参考到独立回复</div></div>
     </div>
-  </div>
-  <div class="spine">
-    <div class="name">服务 IM</div>
-    <div class="node"><div class="when">2025.03</div><div class="what">自动建群</div><div class="sub">APP 内问不到人时拉入三方管家</div></div>
-    <div class="node"><div class="when">2025.08</div><div class="what">运营闭环</div><div class="sub">跟进、排班、异常可以运营</div></div>
-    <div class="node"><div class="when">2025.12</div><div class="what">移动端</div><div class="sub">离开电脑不再漏掉待办</div></div>
-    <div class="node"><div class="when">2026.06–08</div><div class="what">组织与根因</div><div class="sub">按大区小区和维保能力管辖</div></div>
-    <div class="node"><div class="when">2026.10</div><div class="what">五项自动化</div><div class="sub">第一次把 ROI 写进立项</div></div>
-    <div class="node"><div class="when">2026.11</div><div class="what">群机器人</div><div class="sub">从回答参考到独立回复</div></div>
   </div>
 </section>
 
@@ -431,7 +501,7 @@
   </div>
 
   <footer class="close">
-    <p>战略要的智能引擎，我落在车主服务和社区内容：会话能用已有数据，复杂问题改的是规则和口径，方法写成了角色手册和投入产出。这也是申请 P4-A 的三条行为：主责一个子系统，改革程序解决复杂问题，用专长把方法交给组织。</p>
+    <p>战略要的智能引擎，我落在公域投放与车主服务：公域侧让用户稳定发帖并能量化回流，服务侧让会话能用已有数据。复杂问题改的是规则和口径，方法写成了角色手册和投入产出。这也是申请 P4-A 的三条行为：主责一个子系统，改革程序解决复杂问题，用专长把方法交给组织。</p>
     <p class="note">口径：方案份数来自资料库「2025 / 2026 年产品方案」。2026 年统计截至 11 月 20 日，37 份已扣除 2 份重复。响应时长、合规率、回答率、ROI 均为方案内基线、目标或立项测算。</p>
   </footer>
 </section>
