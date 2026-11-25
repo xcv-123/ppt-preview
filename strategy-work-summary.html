@@ -191,63 +191,69 @@
     display: none;
   }
   .page-user .duo {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
+    min-height: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 12px;
     align-items: stretch;
   }
   .page-user .duo-card {
-    border: 1px solid var(--gm);
+    border: 1.5px solid var(--g);
     border-radius: 8px;
     background: #fff;
     display: flex;
     flex-direction: column;
     min-width: 0;
+    min-height: 0;
+    height: 100%;
     overflow: hidden;
+    box-shadow: 0 1px 0 rgba(13,79,38,.06);
   }
   .page-user .duo-card.soft { background: #f7fbf8; }
   .page-user .duo-hd {
     background: var(--gd);
     color: #fff;
-    padding: 8px 12px;
+    padding: 10px 14px;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 10px;
   }
   .page-user .duo-hd .role {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 750;
     letter-spacing: .08em;
   }
   .page-user .duo-hd .stage {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 650;
-    opacity: .92;
+    opacity: .95;
   }
   .page-user .duo-hd em {
     font-style: normal;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 500;
-    opacity: .82;
+    opacity: .88;
   }
   .page-user .duo-bd {
-    padding: 10px 12px 11px;
+    padding: 12px 14px 13px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
+    flex: 1 1 auto;
+    min-height: 0;
   }
   .page-user .duo-bd .scene {
-    font-size: 12.5px;
+    font-size: 13px;
     font-weight: 750;
     color: var(--g);
     letter-spacing: .03em;
-    line-height: 1.35;
+    line-height: 1.4;
   }
   .page-user .duo-bd .do-label {
     margin: 0;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
     color: var(--ink);
   }
@@ -255,107 +261,97 @@
     margin: 0;
     padding-left: 0;
     list-style: none;
-    font-size: 12px;
-    line-height: 1.42;
+    font-size: 12.5px;
+    line-height: 1.48;
     color: var(--ink2);
-    flex: 0 0 auto;
+    flex: 1 1 auto;
   }
-  .page-user .duo-bd .do li { margin: 0 0 6px; }
+  .page-user .duo-bd .do li { margin: 0 0 7px; }
   .page-user .duo-bd .do li:last-child { margin-bottom: 0; }
   .page-user .duo-bd .do .k {
     display: inline-block;
-    font-size: 11px;
+    font-size: 11.5px;
     line-height: 1.2;
     color: var(--gd);
     background: var(--gs);
     border: 1px solid var(--gm);
     border-radius: 3px;
-    padding: 1px 6px;
+    padding: 2px 7px;
     font-weight: 700;
     margin-right: 5px;
     vertical-align: 1px;
   }
   .page-user .duo-bd .sat {
-    margin: 2px 0 0;
-    font-size: 12px;
-    line-height: 1.4;
+    margin: 4px 0 0;
+    margin-top: auto;
+    font-size: 12.5px;
+    line-height: 1.42;
     color: var(--ink2);
     background: var(--gs);
     border-radius: 4px;
-    padding: 6px 8px;
+    padding: 7px 9px;
   }
   .page-user .duo-bd .sat b {
     color: var(--ink);
     font-weight: 700;
   }
   .page-user .through {
-    display: grid;
-    grid-template-columns: 28px 1fr;
-    gap: 8px 10px;
-    align-items: stretch;
-    padding: 8px 10px;
-    border-radius: 8px;
-    flex: 1 1 auto;
-    min-height: 0;
-    margin-top: 2px;
-  }
-  .page-user .through .lab {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    font-size: 13px;
-    font-weight: 750;
-    color: var(--gd);
-    letter-spacing: .18em;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: #fff;
-    border: 1px solid var(--gm);
+    gap: 10px;
+    padding: 6px 10px;
     border-radius: 6px;
-    padding: 6px 0;
+    flex: 0 0 auto;
+    margin-top: 0;
+  }
+  .page-user .through .lab {
+    writing-mode: horizontal-tb;
+    font-size: 11.5px;
+    font-weight: 750;
+    color: var(--gd);
+    letter-spacing: .06em;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .page-user .through .items {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 7px 8px;
-    height: 100%;
-    min-height: 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
   }
   .page-user .through .item {
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    gap: 10px;
-    align-items: center;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
     min-width: 0;
-    min-height: 0;
-    height: 100%;
-    background: #fff;
-    border: 1px solid var(--gm);
-    border-radius: 6px;
-    padding: 10px 12px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
   }
   .page-user .through .item .t {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    flex-shrink: 0;
+    width: auto;
     text-align: center;
-    font-size: 12.5px;
+    font-size: 11px;
     font-weight: 750;
     color: var(--gd);
-    background: var(--gs);
+    background: #fff;
     border: 1px solid var(--gm);
-    border-radius: 4px;
-    padding: 8px 6px;
-    line-height: 1.25;
+    border-radius: 3px;
+    padding: 2px 6px;
+    line-height: 1.2;
     white-space: nowrap;
   }
   .page-user .through .item p {
     margin: 0;
-    font-size: 11.5px;
-    line-height: 1.4;
-    color: var(--ink2);
+    font-size: 10.5px;
+    line-height: 1.3;
+    color: var(--ink3);
   }
 
   .page-user .close {
@@ -660,7 +656,7 @@
     <div class="who">
       <b>LEAPMOTOR</b>
       两列重点场景：场景 → 我做了什么 → 满意度<br>
-      底部为全场景贯通能力
+      主视觉：潜客 / 车主；底部轻量全场景贯通
     </div>
   </header>
   <hr class="rule">
@@ -714,19 +710,19 @@
     <div class="items">
       <div class="item">
         <span class="t">创作者活动</span>
-        <p>2025 从 0 到 1：达人招募、任务、奖励与站外发帖。2026 补齐申诉、AI 审贴、分层配额，并开放普通用户。潜客 / 车主都能参与，把公域内容供给做成可审核、可分层的中台能力。</p>
+        <p>0→1 平台；申诉 / AI 审贴 / 分层配额</p>
       </div>
       <div class="item">
         <span class="t">年终报告</span>
-        <p>支持生成、分享与抽奖；售前售后都能回顾用车 / 互动成绩并二次传播。作为情感触点，把站内活跃沉淀成可晒、可邀的内容资产。</p>
+        <p>生成、分享、抽奖，可晒可邀</p>
       </div>
       <div class="item">
         <span class="t">AI 搜索</span>
-        <p>站内引入 AI 搜索，热度可配；用户更快找到活动、功能与内容。与内容种草、课堂、服务问答衔接，减少「搜不到、问不明」带来的流失。</p>
+        <p>站内可搜，热度可配</p>
       </div>
       <div class="item">
         <span class="t">UGC 公域同步</span>
-        <p>UGC 可同步抖音 / 小红书；发得出去，也能回到站内看投放效果。让车主与创作者的真实表达持续为潜客种草，打通公域回流链路。</p>
+        <p>同步抖音 / 小红书，回流可量化</p>
       </div>
     </div>
   </div>
