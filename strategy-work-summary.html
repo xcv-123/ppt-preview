@@ -773,6 +773,13 @@
     grid-template-columns: 1fr 1fr;
     gap: 2px;
     flex: 1;
+    align-content: start;
+  }
+  .wf-app .ab.store {
+    grid-template-columns: 1fr 1fr;
+  }
+  .wf-app .ab.store i:last-child {
+    grid-column: 1 / -1;
   }
   .wf-app .ab i {
     font-style: normal;
@@ -1357,16 +1364,17 @@
               </div>
               <div class="wf-app">
                 <div class="ah">门店响应</div>
-                <div class="ab">
-                  <i>待办接单</i><i>移动跟进</i>
-                  <i>工单处理</i><i>及时响应</i>
+                <div class="ab store">
+                  <i>问题跟进</i><i>素材库</i>
+                  <i>客户画像</i><i>离职继承</i>
+                  <i>通知提醒</i>
                 </div>
               </div>
               <div class="wf-app">
                 <div class="ah">总部监管</div>
-                <div class="ab">
-                  <i>权限质检</i><i>SLA 监控</i>
-                  <i>升级介入</i><i>产能看板</i>
+                <div class="ab hq">
+                  <i>满意度推送</i><i>跟进单审核</i>
+                  <i>退网继承</i><i>敏感词监控</i>
                 </div>
               </div>
             </div>
