@@ -201,46 +201,108 @@
     font-size: 11.5px;
     padding: 2px 7px;
   }
-  .page-user .matrix {
-    grid-template-columns: 52px 1fr 1fr;
-    grid-template-rows: 26px minmax(0, 1fr) minmax(0, 1fr);
-    border-radius: 6px;
+  .page-user .duo {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
-  .page-user .mx-col {
+  .page-user .duo-card {
+    border: 1px solid var(--gm);
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .page-user .duo-card.soft { background: #f7fbf8; }
+  .page-user .duo-hd {
+    background: var(--gd);
+    color: #fff;
+    padding: 8px 12px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .page-user .duo-hd .role {
+    font-size: 15px;
+    font-weight: 750;
+    letter-spacing: .08em;
+  }
+  .page-user .duo-hd .stage {
     font-size: 13px;
-    gap: 8px;
-    letter-spacing: .06em;
+    font-weight: 650;
+    opacity: .92;
   }
-  .page-user .mx-col em { font-size: 11px; }
-  .page-user .mx-row { gap: 3px; padding: 4px 2px; }
-  .page-user .mx-row .role { font-size: 15px; letter-spacing: .12em; }
-  .page-user .mx-row .hint { font-size: 10px; }
-  .page-user .mx-cell {
-    padding: 7px 10px 8px;
-    gap: 4px;
-  }
-  .page-user .mx-cell .scene {
+  .page-user .duo-hd em {
+    font-style: normal;
     font-size: 11.5px;
-    line-height: 1.3;
+    font-weight: 500;
+    opacity: .82;
   }
-  .page-user .mx-cell .do-label { font-size: 11.5px; }
-  .page-user .mx-cell .do {
-    font-size: 11px;
+  .page-user .duo-bd {
+    padding: 10px 12px 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-height: 0;
+  }
+  .page-user .duo-bd .scene {
+    font-size: 12.5px;
+    font-weight: 750;
+    color: var(--g);
+    letter-spacing: .03em;
     line-height: 1.35;
   }
-  .page-user .mx-cell .do li { margin: 0 0 3px; }
-  .page-user .mx-cell .do .k {
-    font-size: 10px;
-    padding: 0 4px;
-    margin-right: 3px;
+  .page-user .duo-bd .do-label {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
   }
-  .page-user .mx-cell .sat {
+  .page-user .duo-bd .do {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ink2);
+    flex: 1 1 auto;
+  }
+  .page-user .duo-bd .do li { margin: 0 0 6px; }
+  .page-user .duo-bd .do li:last-child { margin-bottom: 0; }
+  .page-user .duo-bd .do .k {
+    display: inline-block;
     font-size: 11px;
-    line-height: 1.35;
-    padding: 4px 6px;
+    line-height: 1.2;
+    color: var(--gd);
+    background: var(--gs);
+    border: 1px solid var(--gm);
+    border-radius: 3px;
+    padding: 1px 6px;
+    font-weight: 700;
+    margin-right: 5px;
+    vertical-align: 1px;
   }
-  .page-user .mx-cell .empty-mark { font-size: 22px; }
-  .page-user .mx-cell .empty-note { font-size: 11.5px; }
+  .page-user .duo-bd .sat {
+    margin: 0;
+    margin-top: auto;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--ink2);
+    background: var(--gs);
+    border-radius: 4px;
+    padding: 6px 8px;
+  }
+  .page-user .duo-bd .sat b {
+    color: var(--ink);
+    font-weight: 700;
+  }
   .page-user .close {
     padding-top: 4px;
     gap: 10px;
@@ -538,20 +600,15 @@
   <header class="top">
     <div>
       <div class="kicker">02　用户视角 · 我对用户的贡献</div>
-      <h1>潜客 × 车主 · 售前 / 售后能力地图</h1>
+      <h1>潜客 · 售前　｜　车主 · 售后</h1>
     </div>
     <div class="who">
       <b>LEAPMOTOR</b>
-      每格：场景 → 我做了什么（标签 + 动作，无序号）→ 满意度<br>
+      两列重点场景：场景 → 我做了什么 → 满意度<br>
       全场景贯通：创作者活动、年终报告、AI 搜索、UGC 公域同步
     </div>
   </header>
   <hr class="rule">
-
-  <div class="sec">
-    <h3>读图方式</h3>
-    <span>只保留售前与售后两列。横看同一角色；竖看同一阶段两类用户。留资、注册并入售前；提车绑车、学功能并入售后。</span>
-  </div>
 
   <div class="through">
     <div class="lab">全场景贯通</div>
@@ -563,48 +620,46 @@
     </div>
   </div>
 
-  <div class="matrix">
-    <div class="mx-corner"></div>
-    <div class="mx-col">售前 <em>认知种草与转化入口</em></div>
-    <div class="mx-col">售后 <em>活动参与与专属服务</em></div>
+  <div class="duo">
+    <article class="duo-card">
+      <div class="duo-hd">
+        <div>
+          <span class="role">潜客</span>
+          <span class="stage"> · 售前</span>
+        </div>
+        <em>认知种草与转化入口</em>
+      </div>
+      <div class="duo-bd">
+        <div class="scene">场景 · 看车、看口碑，并完成接受邀请 / 留资转化</div>
+        <p class="do-label">我做了什么</p>
+        <ul class="do">
+          <li><span class="k">查看口碑</span>口碑取消问卷，改抓汽车之家：1.0 精简维度 → 2.0 抓取 → 3.0 统一历史口径，让潜客直接查看真实口碑。</li>
+          <li><span class="k">转介绍接受邀请</span>接受邀请页先勾隐私再发验证码；邀请码「6 个月未留资」改为按注册时间起算，减少误伤。</li>
+          <li><span class="k">消息订阅通知</span>补齐潜客消息订阅能力，活动 / 试驾 / 跟进节点可触达，减少错过关键通知。</li>
+        </ul>
+        <p class="sat"><b>满意度：</b>少被二次问卷打扰，真实口碑看得清；接受邀请流程合规清楚；关键节点有通知，少漏跟进。</p>
+      </div>
+    </article>
 
-    <div class="mx-row">
-      <div class="role">潜客</div>
-      <div class="hint">想买车的人</div>
-    </div>
-    <div class="mx-cell">
-      <div class="scene">场景 · 看车、看口碑，并完成接受邀请 / 留资转化</div>
-      <p class="do-label">我做了什么</p>
-      <ul class="do">
-        <li><span class="k">查看口碑</span>口碑取消问卷，改抓汽车之家：1.0 精简维度 → 2.0 抓取 → 3.0 统一历史口径，让潜客直接查看真实口碑。</li>
-        <li><span class="k">转介绍接受邀请</span>接受邀请页先勾隐私再发验证码；邀请码「6 个月未留资」改为按注册时间起算，减少误伤。</li>
-        <li><span class="k">消息订阅通知</span>补齐潜客消息订阅能力，活动 / 试驾 / 跟进节点可触达，减少错过关键通知。</li>
-      </ul>
-      <p class="sat"><b>满意度：</b>少被二次问卷打扰，真实口碑看得清；接受邀请流程合规清楚；关键节点有通知，少漏跟进。</p>
-    </div>
-    <div class="mx-cell soft empty">
-      <div class="empty-mark">—</div>
-      <div class="empty-note">潜客 · 售后暂无重点交付</div>
-    </div>
-
-    <div class="mx-row">
-      <div class="role">车主</div>
-      <div class="hint">已购车的人</div>
-    </div>
-    <div class="mx-cell soft empty">
-      <div class="empty-mark">—</div>
-      <div class="empty-note">车主 · 售前暂无重点交付</div>
-    </div>
-    <div class="mx-cell">
-      <div class="scene">场景 · 学功能、开权限，并持续参与活动；自动进入专属服务群，享受一对多服务</div>
-      <p class="do-label">我做了什么</p>
-      <ul class="do">
-        <li><span class="k">活动参与</span>售后可持续参与转介绍活动、车主课堂与口碑发布。</li>
-        <li><span class="k">车主课堂</span>课堂改为逐题反馈；功能 code 可多选推送；试驾车企微批量解锁最多 2000 台。</li>
-        <li><span class="k">专属服务群</span>服务管家 IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长；叠加运营闭环、移动端、五项自动化与群机器人。</li>
-      </ul>
-      <p class="sat"><b>满意度：</b>学功能即时知道对错，功能开通更快；问得到人、跟得上进度。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
-    </div>
+    <article class="duo-card soft">
+      <div class="duo-hd">
+        <div>
+          <span class="role">车主</span>
+          <span class="stage"> · 售后</span>
+        </div>
+        <em>活动参与与专属服务</em>
+      </div>
+      <div class="duo-bd">
+        <div class="scene">场景 · 学功能、开权限，并持续参与活动；自动进入专属服务群，享受一对多服务</div>
+        <p class="do-label">我做了什么</p>
+        <ul class="do">
+          <li><span class="k">活动参与</span>售后可持续参与转介绍活动、车主课堂与口碑发布。</li>
+          <li><span class="k">车主课堂</span>课堂改为逐题反馈；功能 code 可多选推送；试驾车企微批量解锁最多 2000 台。</li>
+          <li><span class="k">专属服务群</span>服务管家 IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长；叠加运营闭环、移动端、五项自动化与群机器人。</li>
+        </ul>
+        <p class="sat"><b>满意度：</b>学功能即时知道对错，功能开通更快；问得到人、跟得上进度。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
+      </div>
+    </article>
   </div>
 
   <footer class="close">
