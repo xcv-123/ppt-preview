@@ -644,10 +644,38 @@
     flex-direction: column;
     gap: 4px;
   }
-  .wf-layer.l1 { flex: 1.25; }
-  .wf-layer.l2 { flex: 1.05; }
-  .wf-layer.l3 { flex: 0.55; }
-  .wf-layer.l4 { flex: 0.7; }
+  .wf-layer.l1 { flex: 1.35; }
+  .wf-layer.l2 { flex: 1.15; }
+  .wf-layer.l3 { flex: 0.75; }
+  .wf-flow {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 4px 2px;
+    padding: 4px 2px;
+  }
+  .wf-flow .step {
+    background: var(--gs);
+    border: 1px solid var(--g);
+    color: var(--gd);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: 6px 7px;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .wf-flow .arr {
+    color: var(--g);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 1px;
+  }
   .wf-hd {
     display: flex;
     align-items: center;
@@ -717,7 +745,7 @@
   .wf-chips.stack span { text-align: center; }
   .wf-apps {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 4px;
     flex: 1;
     min-height: 0;
@@ -1295,17 +1323,14 @@
               </div>
               <div class="wf-col">
                 <div class="ct">售后服务过程</div>
-                <div class="wf-chips">
-                  <span>自动建群</span>
-                  <span>一对多服务</span>
-                  <span>待办协同</span>
-                  <span>工单留痕</span>
-                  <span>移动端跟进</span>
-                  <span>敏感建单</span>
-                  <span>消息触达</span>
-                  <span>满意度回访</span>
-                  <span>SLA 监控</span>
-                  <span>会话路由</span>
+                <div class="wf-flow">
+                  <span class="step">咨询进入</span><span class="arr">→</span>
+                  <span class="step">自动建群</span><span class="arr">→</span>
+                  <span class="step">一对多服务</span><span class="arr">→</span>
+                  <span class="step">待办协同</span><span class="arr">→</span>
+                  <span class="step">工单留痕</span><span class="arr">→</span>
+                  <span class="step">移动跟进</span><span class="arr">→</span>
+                  <span class="step">闭环回访</span>
                 </div>
               </div>
               <div class="wf-col">
@@ -1331,39 +1356,23 @@
                 </div>
               </div>
               <div class="wf-app">
-                <div class="ah">运营闭环</div>
+                <div class="ah">门店响应</div>
                 <div class="ab">
-                  <i>权限</i><i>待办</i>
-                  <i>工单留痕</i><i>移动跟进</i>
+                  <i>待办接单</i><i>移动跟进</i>
+                  <i>工单处理</i><i>及时响应</i>
                 </div>
               </div>
               <div class="wf-app">
-                <div class="ah">五项自动化</div>
+                <div class="ah">总部监管</div>
                 <div class="ab">
-                  <i>状态触发</i><i>重复咨询</i>
-                  <i>提醒升级</i><i>减负管家</i>
-                </div>
-              </div>
-              <div class="wf-app">
-                <div class="ah">群机器人</div>
-                <div class="ab">
-                  <i>常见问答</i><i>独立回复</i>
-                  <i>转人工</i><i>敏感识别</i>
+                  <i>权限质检</i><i>SLA 监控</i>
+                  <i>升级介入</i><i>产能看板</i>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="wf-layer l3">
-            <div class="wf-hd"><span class="tag">AI 赋能</span></div>
-            <div class="wf-ai">
-              <span>TOP 问题识别</span>
-              <span>机器人回答</span>
-              <span>情绪分析</span>
-            </div>
-          </div>
-
-          <div class="wf-layer l4">
             <div class="wf-hd"><span class="tag">能力底座</span></div>
             <div class="wf-tech">
               <div class="box">
@@ -1388,8 +1397,6 @@
       <div class="panel-hd">案例成果</div>
       <div class="panel-bd panel-empty"></div>
     </section>
-  </div>
-</section>
   </div>
 </section>
 </body>
