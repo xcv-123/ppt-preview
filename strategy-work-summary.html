@@ -267,13 +267,16 @@
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 2px;
+    justify-content: flex-start;
+    gap: 0;
     min-height: 0;
   }
   .page-user .duo-bd .do li {
     margin: 0;
-    padding: 6px 0;
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
     border-bottom: 1px solid var(--line);
   }
   .page-user .duo-bd .do li:last-child {
