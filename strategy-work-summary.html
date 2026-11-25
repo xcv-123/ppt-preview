@@ -470,7 +470,7 @@
     flex: 1;
     min-height: 0;
     display: grid;
-    grid-template-columns: 78px 12px 108px 12px 1fr;
+    grid-template-columns: 88px 10px 100px 10px 1fr;
     gap: 0 4px;
     align-items: stretch;
   }
@@ -478,10 +478,10 @@
     border: 1px solid var(--gm);
     border-radius: 6px;
     background: #f7fbf8;
-    padding: 6px 6px;
+    padding: 5px 5px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
     min-height: 0;
   }
   .sol-col .ttl {
@@ -490,6 +490,12 @@
     color: var(--gd);
     text-align: center;
     padding-bottom: 3px;
+    border-bottom: 1px solid var(--gm);
+  }
+  .sol-col .ttl-sub {
+    margin-top: 3px;
+    padding-top: 4px;
+    border-top: 1px dashed var(--gm);
     border-bottom: 1px solid var(--gm);
   }
   .sol-col .ch {
@@ -503,10 +509,19 @@
     font-weight: 650;
     line-height: 1.2;
   }
+  .sol-col .ch.plat {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 4px;
+    color: var(--gd);
+  }
   .sol-col.agents .ch {
     font-size: 10.5px;
     font-weight: 600;
     padding: 5px 4px;
+  }
+  .sol-supply {
+    overflow: hidden;
   }
   .sol-arrow {
     display: flex;
@@ -1313,14 +1328,21 @@
 
   <div class="case-main">
     <section class="panel">
-      <div class="panel-hd">创作者平台解决方案 · 业务流</div>
+      <div class="panel-hd">创作者平台解决方案</div>
       <div class="panel-bd">
         <div class="sol-flow">
-          <div class="sol-col">
+          <div class="sol-col sol-supply">
             <div class="ttl">用户 / 供给</div>
             <div class="ch">车主</div>
             <div class="ch">全体员工<br><em style="font-style:normal;font-weight:500;color:var(--ink3);font-size:10px;">全员营销</em></div>
             <div class="ch">达人 / KOC</div>
+            <div class="ttl ttl-sub">平台</div>
+            <div class="ch plat">小红书</div>
+            <div class="ch plat">懂车帝</div>
+            <div class="ch plat">汽车之家</div>
+            <div class="ch plat">微博</div>
+            <div class="ch plat">今日头条</div>
+            <div class="ch plat">抖音</div>
           </div>
           <div class="sol-arrow">→</div>
           <div class="sol-col agents">
