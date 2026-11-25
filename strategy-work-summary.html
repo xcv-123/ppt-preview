@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>两年工作总结 · 战略对齐 · 郭静</title>
+<style>
+  :root {
+    --g: #157a3a;
+    --gd: #0d4f26;
+    --gs: #e8f6ee;
+    --gm: #b7dcc6;
+    --ink: #173024;
+    --ink2: #3d5248;
+    --ink3: #6b7d74;
+    --line: #d5e5db;
+    --paper: #ffffff;
+    --bg: #e7eee9;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  @page { size: 13.333in 7.5in; margin: 0; }
+  .hint {
+    max-width: 13.333in;
+    margin: 16px auto 0;
+    color: var(--ink3);
+    font-size: 12px;
+    padding: 0 4px;
+  }
+  .page {
+    width: 13.333in;
+    height: 7.5in;
+    margin: 14px auto;
+    background: var(--paper);
+    padding: 20px 26px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    overflow: hidden;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  @media print {
+    body { background: white; }
+    .hint { display: none; }
+    .page { margin: 0; }
+  }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+  .kicker {
+    font-size: 11px;
+    letter-spacing: .12em;
+    color: var(--g);
+    font-weight: 650;
+  }
+  h1 {
+    margin: 2px 0 0;
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -.01em;
+  }
+  .who { text-align: right; font-size: 12px; color: var(--ink2); line-height: 1.45; }
+  .who b {
+    display: block;
+    color: var(--gd);
+    letter-spacing: .14em;
+    font-size: 12px;
+    font-weight: 750;
+  }
+  .rule { height: 2px; background: var(--g); border: 0; margin: 0; }
+
+  .roof {
+    background: var(--gs);
+    border: 1px solid var(--gm);
+    border-radius: 8px;
+    padding: 8px 14px 9px;
+  }
+  .roof .lab { font-size: 11px; color: var(--g); font-weight: 700; letter-spacing: .08em; }
+  .roof h2 { margin: 2px 0 4px; font-size: 14px; font-weight: 650; line-height: 1.4; }
+  .roof p { margin: 0; font-size: 12.5px; color: var(--ink2); line-height: 1.45; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .stat {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 5px 10px 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .stat .n {
+    font-variant-numeric: tabular-nums;
+    font-size: 18px;
+    font-weight: 720;
+    color: var(--gd);
+    letter-spacing: -.02em;
+  }
+  .stat .l { font-size: 11.5px; color: var(--ink2); line-height: 1.35; }
+
+  .sec {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .sec h3 { margin: 0; font-size: 13px; font-weight: 700; }
+  .sec span { font-size: 11px; color: var(--ink3); }
+
+  .two {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .pillar {
+    border: 1px solid var(--g);
+    border-radius: 8px;
+    background: #f3faf6;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .pillar-hd {
+    background: var(--gd);
+    color: #fff;
+    padding: 7px 12px 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .pillar-hd .intent { font-size: 12px; letter-spacing: .08em; font-weight: 650; opacity: .88; }
+  .pillar-hd h3 { margin: 2px 0 0; font-size: 15px; font-weight: 750; line-height: 1.25; }
+  .pillar-hd .flag {
+    flex-shrink: 0;
+    font-size: 10px;
+    color: var(--gd);
+    background: #fff;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .pillar-bd {
+    padding: 10px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+  }
+  .why { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--ink2); }
+  .lines { display: grid; gap: 8px; flex: 1; }
+  .line {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    gap: 10px;
+    align-items: start;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--gm);
+  }
+  .line:last-child { border-bottom: 0; padding-bottom: 0; }
+  .line .tag {
+    font-size: 12px;
+    font-weight: 750;
+    color: var(--gd);
+    line-height: 1.35;
+    padding-top: 1px;
+  }
+  .line p { margin: 0; font-size: 12.5px; line-height: 1.48; color: var(--ink2); }
+  .line b { color: var(--ink); font-weight: 680; }
+
+  /* page 2 compact */
+  .page-user {
+    padding: 14px 20px 10px;
+    gap: 8px;
+  }
+  .page-user h1 { font-size: 20px; margin-top: 1px; }
+  .page-user .who { font-size: 11.5px; line-height: 1.35; }
+  .page-user .sec {
+    display: none;
+  }
+  .page-user .duo {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .page-user .duo-card {
+    border: 1.5px solid var(--g);
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(13,79,38,.06);
+  }
+  .page-user .duo-card.soft { background: #f7fbf8; }
+  .page-user .duo-hd {
+    background: var(--gd);
+    color: #fff;
+    padding: 10px 14px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .page-user .duo-hd .role {
+    font-size: 17px;
+    font-weight: 750;
+    letter-spacing: .08em;
+  }
+  .page-user .duo-hd .stage {
+    font-size: 14px;
+    font-weight: 650;
+    opacity: .95;
+  }
+  .page-user .duo-hd em {
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: .88;
+  }
+  .page-user .duo-bd {
+    padding: 12px 14px 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+  .page-user .duo-bd .scene {
+    font-size: 13px;
+    font-weight: 750;
+    color: var(--g);
+    letter-spacing: .03em;
+    line-height: 1.4;
+  }
+  .page-user .duo-bd .do-label {
+    margin: 0;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .page-user .duo-bd .do {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    font-size: 12.5px;
+    line-height: 1.48;
+    color: var(--ink2);
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    min-height: 0;
+  }
+  .page-user .duo-bd .do li {
+    margin: 0;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2px 0 0;
+    border-bottom: 0;
+  }
+  .page-user .duo-bd .do-flow .row {
+    display: grid;
+    grid-template-columns: 58px 108px 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+  .page-user .duo-bd .do-flow .st {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10.5px;
+    font-weight: 750;
+    color: #fff;
+    background: var(--gd);
+    border-radius: 3px;
+    padding: 2px 2px;
+    letter-spacing: .02em;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .page-user .duo-bd .do-flow .k {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 0;
+    font-size: 11.5px;
+    line-height: 1.2;
+    color: var(--gd);
+    background: var(--gs);
+    border: 1px solid var(--gm);
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .page-user .duo-bd .do-flow .anno {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--ink2);
+  }
+  .page-user .duo-bd .do-flow .arr {
+    display: flex;
+    justify-content: center;
+    width: 58px;
+    color: var(--g);
+    font-size: 13px;
+    line-height: 1;
+    padding: 1px 0 0;
+    font-weight: 700;
+  }
+  .page-user .duo-bd .do:not(.do-flow) .k {
+    display: inline-block;
+    font-size: 11.5px;
+    line-height: 1.2;
+    color: var(--gd);
+    background: var(--gs);
+    border: 1px solid var(--gm);
+    border-radius: 3px;
+    padding: 2px 7px;
+    font-weight: 700;
+    margin-right: 5px;
+    vertical-align: 1px;
+  }
+  .page-user .duo-bd .do:not(.do-flow) li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid var(--line);
+    padding: 4px 0;
+  }
+  .page-user .duo-bd .do:not(.do-flow) li:last-child {
+    border-bottom: 0;
+  }
+  .page-user .duo-card.soft .do-flow .row {
+    grid-template-columns: 70px 108px 1fr;
+  }
+  .page-user .duo-card.soft .do-flow .arr {
+    width: 70px;
+  }
+  .page-user .duo-bd .sat {
+    margin: 8px 0 0;
+    flex: 0 0 auto;
+    font-size: 12.5px;
+    line-height: 1.42;
+    color: var(--ink2);
+    background: var(--gs);
+    border-radius: 4px;
+    padding: 7px 9px;
+  }
+  .page-user .duo-bd .sat b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .page-user .close {
+    padding-top: 4px;
+    gap: 10px;
+    grid-template-columns: 1fr 190px;
+  }
+  .page-user .close p { font-size: 11.5px; line-height: 1.35; }
+  .page-user .close .note { font-size: 10px; }
+
+  /* case pages: reference layout — pain intro + solution | results */
+  .page-case {
+    padding: 12px 20px 14px;
+    gap: 6px;
+  }
+  .page-case h1 { font-size: 17.5px; margin-top: 1px; }
+  .page-case .who { font-size: 11px; line-height: 1.35; }
+  .pain-intro {
+    border: 1px solid var(--gm);
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--gs), #fff 72%);
+    padding: 7px 11px 8px;
+  }
+  .pain-intro .lab {
+    font-size: 11px;
+    font-weight: 750;
+    color: var(--gd);
+    letter-spacing: .06em;
+    margin-bottom: 3px;
+  }
+  .pain-intro .bg {
+    margin: 0 0 5px;
+    font-size: 11.5px;
+    line-height: 1.35;
+    color: var(--ink2);
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+  .pain-grid.four { grid-template-columns: repeat(4, 1fr); }
+  .pain-item {
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 6px;
+    padding: 5px 7px;
+  }
+  .pain-item .n {
+    font-size: 11.5px;
+    font-weight: 750;
+    color: var(--gd);
+    margin-bottom: 2px;
+  }
+  .pain-item p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.3;
+    color: var(--ink2);
+  }
+  .case-main {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 9px;
+  }
+  .panel {
+    border: 1.5px solid var(--g);
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .panel-hd {
+    background: var(--gd);
+    color: #fff;
+    padding: 6px 11px;
+    font-size: 12.5px;
+    font-weight: 750;
+    letter-spacing: .04em;
+  }
+  .panel-bd {
+    padding: 8px 9px 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+    min-height: 0;
+  }
+  .sol-flow {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 88px 10px 100px 10px 1fr;
+    gap: 0 4px;
+    align-items: stretch;
+  }
+  .sol-col {
+    border: 1px solid var(--gm);
+    border-radius: 6px;
+    background: #f7fbf8;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-height: 0;
+  }
+  .sol-col .ttl {
+    font-size: 11px;
+    font-weight: 750;
+    color: var(--gd);
+    text-align: center;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--gm);
+  }
+  .sol-col .ttl-sub {
+    margin-top: 3px;
+    padding-top: 4px;
+    border-top: 1px dashed var(--gm);
+    border-bottom: 1px solid var(--gm);
+  }
+  .sol-col .ch {
+    font-size: 11px;
+    color: var(--ink2);
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 4px;
+    padding: 4px 5px;
+    text-align: center;
+    font-weight: 650;
+    line-height: 1.2;
+  }
+  .sol-col .ch.plat {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 4px;
+    color: var(--gd);
+  }
+  .sol-col.agents {
+    gap: 2px;
+    padding: 5px 4px;
+  }
+  .sol-col.agents .ch {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 3px;
+  }
+  .sol-supply {
+    overflow: hidden;
+  }
+  .sol-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--g);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .mod-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    flex: 1;
+    min-height: 0;
+  }
+  .mod {
+    border: 1px solid var(--gm);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .mod .mh {
+    background: var(--g);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 750;
+    padding: 3px 7px;
+  }
+  .mod p {
+    margin: 0;
+    padding: 5px 7px;
+    font-size: 10.5px;
+    line-height: 1.3;
+    color: var(--ink2);
+    flex: 1;
+  }
+  .res-block .lab {
+    font-size: 11.5px;
+    font-weight: 750;
+    color: var(--gd);
+    margin-bottom: 2px;
+  }
+  .res-block p, .res-block ol {
+    margin: 0;
+    font-size: 11.5px;
+    line-height: 1.35;
+    color: var(--ink2);
+  }
+  .res-block ol {
+    padding-left: 1.1em;
+    display: grid;
+    gap: 3px;
+  }
+  .res-block li b { color: var(--ink); }
+  .metrics {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .metric {
+    background: var(--gs);
+    border: 1px solid var(--g);
+    border-radius: 6px;
+    padding: 7px 6px 6px;
+    text-align: center;
+  }
+  .metric .v {
+    font-size: 18px;
+    font-weight: 750;
+    color: var(--gd);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .metric .l {
+    margin-top: 2px;
+    font-size: 10.5px;
+    line-height: 1.25;
+    color: var(--ink2);
+  }
+  .case-foot {
+    margin: 0;
+    font-size: 10px;
+    color: var(--ink3);
+    line-height: 1.3;
+  }
+  .panel-empty {
+    flex: 1;
+    min-height: 0;
+    background: #fafcfb;
+  }
+
+
+  /* SCRM — 微丰式分层架构 */
+  .page-scrm .case-main {
+    grid-template-columns: 1.35fr 0.65fr;
+  }
+  .wf {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .wf-layer {
+    border: 1px dashed var(--gm);
+    border-radius: 6px;
+    background: #f7fbf8;
+    padding: 5px 6px 6px;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .wf-layer.l1 { flex: 1.35; }
+  .wf-layer.l2 { flex: 1.15; }
+  .wf-layer.l3 { flex: 0.75; }
+  .wf-flow {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 3px 2px;
+  }
+  .wf-lane {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    min-width: 0;
+  }
+  .wf-lane .lab {
+    flex: 0 0 42px;
+    font-size: 9.5px;
+    font-weight: 750;
+    color: #fff;
+    background: var(--gd);
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px 2px;
+    line-height: 1.2;
+  }
+  .wf-lane.tmp .lab { background: #2a7a4a; }
+  .wf-lane.fix .lab { background: #0d4f26; }
+  .wf-lane .steps {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px 2px;
+    min-width: 0;
+  }
+  .wf-flow .step {
+    background: var(--gs);
+    border: 1px solid var(--g);
+    color: var(--gd);
+    font-size: 9.5px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 4px 5px;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .wf-flow .arr {
+    color: var(--g);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 0 1px;
+  }
+  .wf-hd {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .wf-hd .tag {
+    background: var(--gd);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: .06em;
+    border-radius: 3px;
+    padding: 2px 7px;
+    white-space:nowrap;
+  }
+  .wf-hd .hint {
+    font-size: 10px;
+    color: var(--ink3);
+  }
+  .wf-row {
+    display: grid;
+    gap: 5px;
+    flex: 1;
+    min-height: 0;
+  }
+  .wf-row.touch {
+    grid-template-columns: 78px 1fr 90px;
+  }
+  .wf-col {
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 5px;
+    padding: 4px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .wf-col .ct {
+    font-size: 10px;
+    font-weight: 750;
+    color: var(--gd);
+    text-align: center;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--gm);
+  }
+  .wf-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    align-content: flex-start;
+  }
+  .wf-chips span {
+    background: var(--gs);
+    border: 1px solid var(--gm);
+    color: var(--ink2);
+    font-size: 9.5px;
+    line-height: 1.2;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+  .wf-chips.stack {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .wf-chips.stack span { text-align: center; }
+  .wf-apps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    flex: 1;
+    min-height: 0;
+  }
+  .wf-app {
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .wf-app .ah {
+    background: var(--g);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 750;
+    text-align: center;
+    padding: 3px 4px;
+  }
+  .wf-app .ab {
+    padding: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    flex: 1;
+    align-content: start;
+  }
+  .wf-app .ab.store {
+    grid-template-columns: 1fr 1fr;
+  }
+  .wf-app .ab.store i:last-child {
+    grid-column: 1 / -1;
+  }
+  .wf-app .ab i {
+    font-style: normal;
+    font-size: 9px;
+    line-height: 1.25;
+    color: var(--ink2);
+    background: #f3f9f5;
+    border-radius: 3px;
+    padding: 3px 4px;
+    text-align: center;
+  }
+  .wf-ai {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+  .wf-ai span {
+    background: var(--g);
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 650;
+    border-radius: 4px;
+    padding: 6px 4px;
+    line-height: 1.25;
+  }
+  .wf-tech {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+    flex: 1;
+  }
+  .wf-tech .box {
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 5px;
+    padding: 4px;
+  }
+  .wf-tech .box .ct { margin-bottom: 3px; }
+
+
+  .matrix {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 64px 1fr 1fr;
+    grid-template-rows: 30px minmax(0, 1fr) minmax(0, 1.15fr);
+    border: 1px solid var(--gm);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .mx-corner, .mx-col, .mx-row, .mx-cell {
+    border-right: 1px solid var(--gm);
+    border-bottom: 1px solid var(--gm);
+  }
+  .matrix > *:nth-child(3n) { border-right: 0; }
+  .matrix > *:nth-last-child(-n+3) { border-bottom: 0; }
+  .mx-corner { background: var(--gd); }
+  .mx-col {
+    background: var(--gd);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 750;
+    letter-spacing: .08em;
+  }
+  .mx-col em {
+    font-style: normal;
+    font-size: 11.5px;
+    font-weight: 500;
+    opacity: .85;
+  }
+  .mx-row {
+    background: var(--gs);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 3px;
+    text-align: center;
+  }
+  .mx-row .role {
+    writing-mode: vertical-rl;
+    font-size: 16px;
+    font-weight: 750;
+    color: var(--gd);
+    letter-spacing: .16em;
+  }
+  .mx-row .hint {
+    writing-mode: vertical-rl;
+    font-size: 10.5px;
+    color: var(--ink2);
+    letter-spacing: .06em;
+  }
+  .mx-cell {
+    padding: 8px 11px 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #fff;
+  }
+  .mx-cell.soft { background: #f7fbf8; }
+  .mx-cell .scene {
+    font-size: 12px;
+    font-weight: 750;
+    color: var(--g);
+    letter-spacing: .03em;
+    line-height: 1.35;
+  }
+  .mx-cell .do .k {
+    display: inline-block;
+    font-size: 10.5px;
+    line-height: 1.2;
+    color: var(--gd);
+    background: var(--gs);
+    border: 1px solid var(--gm);
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-weight: 700;
+    margin-right: 4px;
+    vertical-align: 1px;
+  }
+  .mx-cell.empty {
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #f7faf8;
+    border-style: dashed;
+  }
+  .mx-cell .empty-mark {
+    font-size: 28px;
+    line-height: 1;
+    color: var(--gm);
+    font-weight: 300;
+  }
+  .mx-cell .empty-note {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: .04em;
+  }
+  .mx-cell .do-label {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .mx-cell .do {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    font-size: 11.5px;
+    line-height: 1.4;
+    color: var(--ink2);
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+  .mx-cell .do li { margin: 0 0 4px; padding-left: 0; }
+  .mx-cell .do li:last-child { margin-bottom: 0; }
+  .mx-cell .sat {
+    margin: 0;
+    margin-top: auto;
+    flex: 0 0 auto;
+    font-size: 11.5px;
+    line-height: 1.4;
+    color: var(--ink2);
+    background: var(--gs);
+    border-radius: 4px;
+    padding: 5px 7px;
+  }
+  .mx-cell .sat b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .through {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 8px 12px;
+    border: 1px solid var(--gm);
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--gs), #fff 55%);
+  }
+  .through .lab {
+    font-size: 12.5px;
+    font-weight: 750;
+    color: var(--gd);
+    letter-spacing: .06em;
+    white-space: nowrap;
+  }
+  .through .items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .through .items span {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gd);
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 4px;
+    padding: 3px 8px;
+  }
+  .close {
+    border-top: 1px solid var(--line);
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 210px;
+    gap: 12px;
+    align-items: start;
+  }
+  .close p { margin: 0; font-size: 12px; line-height: 1.45; }
+  .close .note { font-size: 10.5px; color: var(--ink3); line-height: 1.4; }
+</style>
+</head>
+<body>
+<p class="hint">四页横向幻灯片。打印或导出 PDF 时选择纸张 13.333 × 7.5 英寸（16:9）、边距无、勾选背景图形。带箭头的数字是方案内的基线、目标或立项测算。</p>
+
+<section class="page">
+  <header class="top">
+    <div>
+      <div class="kicker">01　业务视角 · 我对业务的贡献</div>
+      <h1>两年工作在战略屋里的位置</h1>
+    </div>
+    <div class="who">
+      <b>LEAPMOTOR</b>
+      郭静 · 产品经理 · 营销运营部<br>
+      现职级 P3-B · 申请 P4-A · 2025.01—2026.11
+    </div>
+  </header>
+  <hr class="rule">
+
+  <div class="roof">
+    <div class="lab">战略愿景</div>
+    <h2>成为驱动零跑全球增长的核心智能引擎，构建超百万级用户与伙伴共赢的数智生态。</h2>
+    <p>两年工作只对两条业务组合：公域投放效率、车主服务。前者靠用户在公域发帖形成内容供给；后者靠服务管家 IM 把售后协同做成可自动运转的子系统。</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="n">85</span><span class="l">份方案进入评审或上线<br>2025 年 48 份，2026 年去重 37 份</span></div>
+    <div class="stat"><span class="n">2</span><span class="l">条业务组合上的主线<br>公域投放 · 车主服务</span></div>
+    <div class="stat"><span class="n">3</span><span class="l">处写清边界的 AI<br>审贴、充电 RAG、群机器人</span></div>
+    <div class="stat"><span class="n">6</span><span class="l">个公域分发平台<br>抖音、小红书、汽车之家等</span></div>
+  </div>
+
+  <div class="sec">
+    <h3>业务组合上的落点</h3>
+    <span>对应战略意图「强体验」与「助决策」。其余业务组合不在这两年的主责范围。</span>
+  </div>
+
+  <div class="two">
+    <article class="pillar">
+      <div class="pillar-hd">
+        <div>
+          <div class="intent">强体验</div>
+          <h3>提升公域投放效率</h3>
+        </div>
+        <span class="flag">内容供给</span>
+      </div>
+      <div class="pillar-bd">
+        <p class="why">公域投放要的不是多开一个站内频道，而是让车主和创作者愿意、并能稳定地在抖音、小红书、汽车之家等公域发帖。两年做的是从 0 到 1 把这条供给链建起来，再让审核和采集自己运转。</p>
+        <div class="lines">
+          <div class="line">
+            <div class="tag">创作者平台</div>
+            <p><b>2025 从 0 到 1</b>：达人招募、任务、奖励、站外发帖覆盖抖音 / 小红书 / 汽车之家 / 懂车帝 / 头条 / 微博。<b>2026 主投入 13 份</b>：OCR、申诉、AI 自动审核、开放普通用户、分层报名配额、数皆看板与补推。把活动报名工具做成可审核、可分层的公域内容供给中台。</p>
+          </div>
+          <div class="line">
+            <div class="tag">全员营销</div>
+            <p>核心是让员工也能在抖音、小红书等公域平台发帖并获得奖励，把内部员工变成可运营的公域内容供给方，与创作者平台共用任务、审核与激励能力。</p>
+          </div>
+          <div class="line">
+            <div class="tag">口碑生产</div>
+            <p>问卷二次打扰改为抓汽车之家口碑：1.0 精简维度，2.0 取消问卷改抓取，3.0 按 9 月 17 日前后统一历史口径。指标从回收量改为点评量、单条处理耗时、详情转化，让公域口碑能直接用于站内决策与投放。</p>
+          </div>
+          <div class="line">
+            <div class="tag">投放工具</div>
+            <p>UGC 可同步抖音与小红书；分享组件统一；专题页用 uid / openid 溯源；登录浮层按渠道管理，并可按渠道看 PV / UV。公域帖既能发得出去，也能回到站内量出投放效果。</p>
+          </div>
+          <div class="line">
+            <div class="tag">消息订阅</div>
+            <p>补齐潜客消息订阅能力，活动 / 试驾 / 跟进等关键节点可触达；与注册转化、转介绍接受邀请衔接，减少错过通知与漏跟进，让公域回流后的触达可运营。</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="pillar">
+      <div class="pillar-hd">
+        <div>
+          <div class="intent">助决策</div>
+          <h3>提升车主服务</h3>
+        </div>
+        <span class="flag">主责子系统</span>
+      </div>
+      <div class="pillar-bd">
+        <p class="why">车主服务的核心是服务管家 IM：用户在 APP 里问得到人，门店和总部跟得上，重复咨询由系统先答。同一条主线从自动建群叠到自动化和群机器人，不另起炉灶。</p>
+        <div class="lines">
+          <div class="line">
+            <div class="tag">服务 IM</div>
+            <p>一期自动建群与三级权限 → 二期运营闭环 → 移动端 → 大区 / 小区权限与根因修复 → 五项自动化（第一次写 ROI：22 人天、投入 4.4 万、年收益测算 36 万、ROI 约 7.1）→ 群机器人可独立回复。</p>
+          </div>
+          <div class="line">
+            <div class="tag">充电问答</div>
+            <p>手册充电章节、充电资讯、IM 素材做成 RAG。只答充电；高压用电、费用、需到店诊断、改装破解使用固定拒绝话术。置信度不足就不答，方案目标为首响不超过 3 秒。</p>
+          </div>
+          <div class="line">
+            <div class="tag">转介绍</div>
+            <p>海报五版沉淀到个人素材库；奖励改为绑车核销保养券；试驾车绑车人取消邀请资格。下单后可持续邀友裂变，把车主活跃做成可运营的转化入口。</p>
+          </div>
+          <div class="line">
+            <div class="tag">车主课堂</div>
+            <p>课堂改为逐题反馈；功能 code 可多选推送；试驾车用企微批量解锁功能，单次最多 2000 台，减少门店重复答题，把管家时间留给复杂问题。</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="page page-user">
+  <header class="top">
+    <div>
+      <div class="kicker">02　用户视角 · 我对用户的贡献</div>
+      <h1>潜客 · 售前　｜　车主 · 售后</h1>
+    </div>
+    <div class="who">
+      <b>LEAPMOTOR</b>
+      两列重点场景：场景 → 我做了什么 → 满意度<br>
+      潜客 · 售前　｜　车主 · 售后
+    </div>
+  </header>
+  <hr class="rule">
+
+  <div class="duo">
+    <article class="duo-card">
+      <div class="duo-hd">
+        <div>
+          <span class="role">潜客</span>
+          <span class="stage"> · 售前</span>
+        </div>
+        <em>官方/公域认知 → 感知 → 转化 → 触达</em>
+      </div>
+      <div class="duo-bd">
+        <div class="scene">场景 · 看车、看口碑、被内容种草，并完成接受邀请 / 留资转化</div>
+        <p class="do-label">我做了什么</p>
+        <ul class="do do-flow">
+          <li>
+            <div class="row"><span class="st">官方认知</span><span class="k">查看口碑</span><span class="anno">官方小程序了解零跑：口碑取消问卷，改抓汽车之家（1.0 精简维度 → 2.0 抓取 → 3.0 统一历史口径），站内直接看真实口碑。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">公域认知</span><span class="k">内容种草</span><span class="anno">公域平台了解零跑：创作者与 UGC 触达潜客；专题页 uid / openid 溯源，分享组件统一，公域种草可回流站内量化。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">感知</span><span class="k">年终报告</span><span class="anno">强化品牌感知：支持生成、分享与抽奖，售前也能回顾互动成绩并二次传播。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">转化</span><span class="k">转介绍接受邀请</span><span class="anno">试驾、下单获取优惠：接受邀请页先勾隐私再发验证码；邀请码「6 个月未留资」改为按注册时间起算，减少误伤。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">触达</span><span class="k">消息订阅通知</span><span class="anno">新车上市、活动通知提醒：补齐潜客消息订阅能力，关键节点可触达，减少错过通知。</span></div>
+          </li>
+        </ul>
+        <p class="sat"><b>满意度：</b>官方与公域都能快速了解；品牌印象更深；转化路径清楚有优惠；关键信息不漏接。</p>
+      </div>
+    </article>
+
+    <article class="duo-card soft">
+      <div class="duo-hd">
+        <div>
+          <span class="role">车主</span>
+          <span class="stage"> · 售后</span>
+        </div>
+        <em>下单 → 交付 → 绑定 → 智驾 → 咨询 → 感知</em>
+      </div>
+      <div class="duo-bd">
+        <div class="scene">场景 · 沿用车旅程持续参与活动、学功能开权限，并在售后问得到人</div>
+        <p class="do-label">我做了什么</p>
+        <ul class="do do-flow">
+          <li>
+            <div class="row"><span class="st">新车下单</span><span class="k">转介绍活动</span><span class="anno">下单后可参与转介绍并进入专属服务群：海报五版进个人素材库；奖励改为绑车核销保养券；试驾车绑车人取消邀请资格。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">新车交付</span><span class="k">口碑活动</span><span class="anno">交付后可参与口碑活动：真实用车表达可持续产出，反哺潜客种草与公域内容供给。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">新车绑定</span><span class="k">创作者活动</span><span class="anno">绑车后可参与创作者活动：平台 0→1；申诉、AI 审贴、分层配额；车主可持续发帖，服务公域内容供给。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">智驾功能激活</span><span class="k">车主课堂</span><span class="anno">智驾功能激活时学功能：课堂改为逐题反馈；功能 code 可多选推送；试驾车企微批量解锁最多 2000 台。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">售后咨询</span><span class="k">AI 搜索（充电）</span><span class="anno">APP 内搜索：站内 AI 搜索热度可配；充电手册 / 资讯 / 素材做成 RAG，更快找到功能、活动与充电答案。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">售后咨询</span><span class="k">专属服务群</span><span class="anno">专属群聊一对多服务：IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长；叠加运营闭环、移动端、五项自动化与群机器人。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">品牌感知</span><span class="k">年终报告</span><span class="anno">强化品牌感知：可生成、分享与抽奖，售后回顾用车 / 互动成绩，沉淀可晒可邀的情感触点。</span></div>
+          </li>
+        </ul>
+        <p class="sat"><b>满意度：</b>下单到用车节点都有可参与活动；学功能即时知道对错；搜得到、问得清、群里跟得上。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
+      </div>
+    </article>
+  </div>
+
+
+  <footer class="close">
+    <p>领导记两句：潜客售前按「官方/公域认知 → 感知 → 转化 → 触达」跑通；车主售后按「下单 → 交付 → 绑定 → 智驾 → 咨询 → 感知」贯穿活动、课堂与服务。</p>
+    <p class="note">口径：资料库「2025 / 2026 年产品方案」。2026 截至 11 月 20 日。响应等数字为方案内基线 / 目标或立项测算。</p>
+  </footer>
+</section>
+
+<section class="page page-case">
+  <header class="top">
+    <div>
+      <div class="kicker">03　专业案例 · 我对关键问题的拆解</div>
+      <h1>创作者平台：公域投放痛点与解决方案</h1>
+    </div>
+    <div class="who">
+      <b>LEAPMOTOR</b>
+      案例 01 / 02<br>
+      对齐战略 · 提升公域投放效率
+    </div>
+  </header>
+  <hr class="rule">
+
+  <div class="pain-intro">
+    <div class="lab">背景与行业 / 业务痛点</div>
+    <p class="bg">2025 年初，公域内容仍依赖人工拉群与表格维护达人 / KOC；车主与员工发帖散落多平台，任务、审核、奖励未产品化。</p>
+    <div class="pain-grid four">
+      <div class="pain-item"><div class="n">痛点 1 · 转化难统计</div><p>公域内容素材带来的转化链路断裂，投放效果难闭环。</p></div>
+      <div class="pain-item"><div class="n">痛点 2 · KOC 难维护</div><p>达人 / KOC 数据靠表格，名单、任务、履约状态难统一管理。</p></div>
+      <div class="pain-item"><div class="n">痛点 3 · 审核与奖励慢</div><p>审核量大、人工处理，奖励发放延迟严重，创作者体验差。</p></div>
+      <div class="pain-item"><div class="n">痛点 4 · 运营效率低</div><p>活动难规模化复制，车主与员工供给无法稳定放大。</p></div>
+    </div>
+  </div>
+
+  <div class="case-main">
+    <section class="panel">
+      <div class="panel-hd">创作者平台解决方案</div>
+      <div class="panel-bd">
+        <div class="sol-flow">
+          <div class="sol-col sol-supply">
+            <div class="ttl">用户 / 供给</div>
+            <div class="ch">潜客</div>
+            <div class="ch">车主</div>
+            <div class="ch">全体员工<br><em style="font-style:normal;font-weight:500;color:var(--ink3);font-size:10px;">全员营销</em></div>
+            <div class="ttl ttl-sub">平台</div>
+            <div class="ch plat">小红书</div>
+            <div class="ch plat">懂车帝</div>
+            <div class="ch plat">汽车之家</div>
+            <div class="ch plat">微博</div>
+            <div class="ch plat">今日头条</div>
+            <div class="ch plat">抖音</div>
+          </div>
+          <div class="sol-arrow">→</div>
+          <div class="sol-col agents">
+            <div class="ttl">业务场景</div>
+            <div class="ch">招募审核</div>
+            <div class="ch">活动设置</div>
+            <div class="ch">达人维护</div>
+            <div class="ch">帖子审核</div>
+            <div class="ch">奖励下发</div>
+            <div class="ch">效果评估</div>
+            <div class="ch">预算约束</div>
+          </div>
+          <div class="sol-arrow">→</div>
+          <div class="sol-col" style="padding:0;background:transparent;border:0;">
+            <div class="mod-grid" style="height:100%;">
+              <div class="mod"><div class="mh">数据采集与管理</div><p>抖音、小红书、汽车之家、懂车帝、头条、微博——公域发帖统一回流。</p></div>
+              <div class="mod"><div class="mh">KOC 管理</div><p>达人 / KOC 名单、分层、履约与合作状态统一维护，替代表格管理。</p></div>
+              <div class="mod"><div class="mh">活动中心</div><p>报名、任务、分层配额、奖励发放；员工与车主均可获激励。</p></div>
+              <div class="mod"><div class="mh">审核中心</div><p>OCR 验真 + AI 审贴 + 人审 / 申诉，降低积压与错发。</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-hd">案例成果</div>
+      <div class="panel-bd panel-empty"></div>
+    </section>
+  </div>
+</section>
+
+<section class="page page-case page-scrm">
+  <header class="top">
+    <div>
+      <div class="kicker">04　专业案例 · 我对关键问题的拆解</div>
+      <h1>服务 SCRM：车主服务痛点与解决方案</h1>
+    </div>
+    <div class="who">
+      <b>LEAPMOTOR</b>
+      案例 02 / 02<br>
+      对齐战略 · 提升车主服务
+    </div>
+  </header>
+  <hr class="rule">
+
+  <div class="pain-intro">
+    <div class="lab">背景与业务痛点</div>
+    <p class="bg">售后咨询与跟进长期依赖一对一沟通和个人经验；门店管家、总部管家、服务运营入口割裂，信息不在同一会话，重复咨询与漏跟进并存。</p>
+    <div class="pain-grid four">
+      <div class="pain-item"><div class="n">痛点 1 · 车主入口</div><p>车主找不到稳定服务入口，问得到人难、体验碎片化。</p></div>
+      <div class="pain-item"><div class="n">痛点 2 · 门店协同</div><p>门店跟进难协同、难留痕，跨角色靠人肉同步。</p></div>
+      <div class="pain-item"><div class="n">痛点 3 · 重复咨询</div><p>重复咨询吃掉管家产能，权限 / 自动化 / 质检难做。</p></div>
+      <div class="pain-item"><div class="n">痛点 4 · 难量化</div><p>响应与待办不可量化，漏跟进难以及时发现。</p></div>
+    </div>
+  </div>
+
+  <div class="case-main">
+    <section class="panel">
+      <div class="panel-hd">服务 SCRM 解决方案 · 架构</div>
+      <div class="panel-bd" style="padding:6px 7px 7px;">
+        <div class="wf">
+          <div class="wf-layer l1">
+            <div class="wf-hd"><span class="tag">业务场景</span><span class="hint">触点接入 → 售后服务过程 → 协同与分析</span></div>
+            <div class="wf-row touch">
+              <div class="wf-col">
+                <div class="ct">触点 / 角色</div>
+                <div class="wf-chips stack">
+                  <span>车主</span>
+                  <span>门店员工</span>
+                  <span>服务运营</span>
+                  <span>CC</span>
+                </div>
+              </div>
+              <div class="wf-col">
+                <div class="ct">售后服务过程</div>
+                <div class="wf-flow">
+                  <div class="wf-lane tmp">
+                    <div class="lab">临时群</div>
+                    <div class="steps">
+                      <span class="step">咨询进入</span><span class="arr">→</span>
+                      <span class="step">自动建群</span><span class="arr">→</span>
+                      <span class="step">一对多服务</span><span class="arr">→</span>
+                      <span class="step">问题解决</span><span class="arr">→</span>
+                      <span class="step">结案解散</span>
+                    </div>
+                  </div>
+                  <div class="wf-lane fix">
+                    <div class="lab">固定群</div>
+                    <div class="steps">
+                      <span class="step">专属群绑定</span><span class="arr">→</span>
+                      <span class="step">日常服务</span><span class="arr">→</span>
+                      <span class="step">待办协同</span><span class="arr">→</span>
+                      <span class="step">工单留痕</span><span class="arr">→</span>
+                      <span class="step">闭环回访</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wf-col">
+                <div class="ct">分析</div>
+                <div class="wf-chips stack">
+                  <span>响应时效</span>
+                  <span>待办及时率</span>
+                  <span>重复咨询占比</span>
+                  <span>管家产能</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-layer l2">
+            <div class="wf-hd"><span class="tag">应用中心</span><span class="hint">服务 SCRM 核心模块</span></div>
+            <div class="wf-apps">
+              <div class="wf-app">
+                <div class="ah">专属服务群</div>
+                <div class="ab">
+                  <i>自动建群</i><i>一对多</i>
+                  <i>拉人入群</i><i>同屏协同</i>
+                </div>
+              </div>
+              <div class="wf-app">
+                <div class="ah">门店响应</div>
+                <div class="ab store">
+                  <i>问题跟进</i><i>素材库</i>
+                  <i>客户画像</i><i>离职继承</i>
+                  <i>通知提醒</i>
+                </div>
+              </div>
+              <div class="wf-app">
+                <div class="ah">总部监管</div>
+                <div class="ab hq">
+                  <i>满意度推送</i><i>跟进单审核</i>
+                  <i>退网继承</i><i>敏感词监控</i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-layer l3">
+            <div class="wf-hd"><span class="tag">能力底座</span></div>
+            <div class="wf-tech">
+              <div class="box">
+                <div class="ct">会话中台</div>
+                <div class="wf-chips"><span>IM 会话</span><span>群聊</span><span>存档</span></div>
+              </div>
+              <div class="box">
+                <div class="ct">自动化引擎</div>
+                <div class="wf-chips"><span>规则触发</span><span>待办</span><span>工单</span></div>
+              </div>
+              <div class="box">
+                <div class="ct">业务集成</div>
+                <div class="wf-chips"><span>APP</span><span>门店</span><span>知识库</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-hd">案例成果</div>
+      <div class="panel-bd panel-empty"></div>
+    </section>
+  </div>
+</section>
+</body>
+</html>
