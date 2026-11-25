@@ -180,6 +180,75 @@
   .line p { margin: 0; font-size: 12.5px; line-height: 1.48; color: var(--ink2); }
   .line b { color: var(--ink); font-weight: 680; }
 
+  /* page 2 compact */
+  .page-user {
+    padding: 16px 22px 12px;
+    gap: 6px;
+  }
+  .page-user h1 { font-size: 20px; margin-top: 1px; }
+  .page-user .who { font-size: 11.5px; line-height: 1.35; }
+  .page-user .sec {
+    display: none;
+  }
+  .page-user .through {
+    padding: 5px 10px;
+    gap: 8px;
+    border-radius: 6px;
+  }
+  .page-user .through .lab { font-size: 12px; }
+  .page-user .through .items { gap: 5px; }
+  .page-user .through .items span {
+    font-size: 11.5px;
+    padding: 2px 7px;
+  }
+  .page-user .matrix {
+    grid-template-columns: 52px 1fr 1fr;
+    grid-template-rows: 26px minmax(0, 1fr) minmax(0, 1fr);
+    border-radius: 6px;
+  }
+  .page-user .mx-col {
+    font-size: 13px;
+    gap: 8px;
+    letter-spacing: .06em;
+  }
+  .page-user .mx-col em { font-size: 11px; }
+  .page-user .mx-row { gap: 3px; padding: 4px 2px; }
+  .page-user .mx-row .role { font-size: 15px; letter-spacing: .12em; }
+  .page-user .mx-row .hint { font-size: 10px; }
+  .page-user .mx-cell {
+    padding: 7px 10px 8px;
+    gap: 4px;
+  }
+  .page-user .mx-cell .scene {
+    font-size: 11.5px;
+    line-height: 1.3;
+  }
+  .page-user .mx-cell .do-label { font-size: 11.5px; }
+  .page-user .mx-cell .do {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .page-user .mx-cell .do li { margin: 0 0 3px; }
+  .page-user .mx-cell .do .k {
+    font-size: 10px;
+    padding: 0 4px;
+    margin-right: 3px;
+  }
+  .page-user .mx-cell .sat {
+    font-size: 11px;
+    line-height: 1.35;
+    padding: 4px 6px;
+  }
+  .page-user .mx-cell .empty-mark { font-size: 22px; }
+  .page-user .mx-cell .empty-note { font-size: 11.5px; }
+  .page-user .close {
+    padding-top: 4px;
+    gap: 10px;
+    grid-template-columns: 1fr 190px;
+  }
+  .page-user .close p { font-size: 11.5px; line-height: 1.35; }
+  .page-user .close .note { font-size: 10px; }
+
   .matrix {
     flex: 1;
     min-height: 0;
@@ -465,7 +534,7 @@
   </div>
 </section>
 
-<section class="page">
+<section class="page page-user">
   <header class="top">
     <div>
       <div class="kicker">02　用户视角 · 我对用户的贡献</div>
@@ -497,7 +566,7 @@
   <div class="matrix">
     <div class="mx-corner"></div>
     <div class="mx-col">售前 <em>认知种草与转化入口</em></div>
-    <div class="mx-col">售后 <em>用车活跃与专属服务</em></div>
+    <div class="mx-col">售后 <em>活动参与与专属服务</em></div>
 
     <div class="mx-row">
       <div class="role">潜客</div>
@@ -522,31 +591,24 @@
       <div class="role">车主</div>
       <div class="hint">已购车的人</div>
     </div>
-    <div class="mx-cell soft">
-      <div class="scene">场景 · 转介绍邀友、帮品牌种草</div>
-      <p class="do-label">我做了什么</p>
-      <ul class="do">
-        <li><span class="k">转介绍海报</span>海报五版沉淀到个人素材库，邀友物料随手可得。</li>
-        <li><span class="k">转介绍奖励</span>奖励改为绑车核销保养券，激励与真实用车绑定。</li>
-        <li><span class="k">邀请资格</span>试驾车绑车人取消邀请资格，减少羊毛与无效邀请。</li>
-      </ul>
-      <p class="sat"><b>满意度：</b>愿意邀、放心邀；物料齐、奖励清楚；认真邀友的人少被羊毛党挤占。</p>
+    <div class="mx-cell soft empty">
+      <div class="empty-mark">—</div>
+      <div class="empty-note">车主 · 售前暂无重点交付</div>
     </div>
     <div class="mx-cell">
       <div class="scene">场景 · 学功能、开权限，并持续参与活动；自动进入专属服务群，享受一对多服务</div>
       <p class="do-label">我做了什么</p>
       <ul class="do">
-        <li><span class="k">用车活跃</span>售后可持续参与转介绍活动、车主课堂与口碑发布。</li>
+        <li><span class="k">活动参与</span>售后可持续参与转介绍活动、车主课堂与口碑发布。</li>
         <li><span class="k">车主课堂</span>课堂改为逐题反馈；功能 code 可多选推送；试驾车企微批量解锁最多 2000 台。</li>
         <li><span class="k">专属服务群</span>服务管家 IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长；叠加运营闭环、移动端、五项自动化与群机器人。</li>
-        <li><span class="k">充电 RAG</span>充电手册 / 资讯 / 素材做成 RAG；会话带维修记录，客户主体改为 vin。</li>
       </ul>
-      <p class="sat"><b>满意度：</b>学功能即时知道对错，功能开通更快；问得到人、跟得上进度、答得清充电。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
+      <p class="sat"><b>满意度：</b>学功能即时知道对错，功能开通更快；问得到人、跟得上进度。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
     </div>
   </div>
 
   <footer class="close">
-    <p>领导记两句：潜客售前看得到真实口碑与公域内容，并能顺畅留资转化；车主售前帮种草转介绍，售后既能玩创作者 / 课堂 / 口碑，又能自动进专属服务群享受一对多服务。全场景贯通创作者活动、年终报告、AI 搜索与 UGC 公域同步。</p>
+    <p>领导记两句：潜客售前看得到真实口碑，接受邀请与消息订阅顺畅；车主售后能参与活动 / 课堂 / 口碑，并能自动进专属服务群。全场景贯通创作者活动、年终报告、AI 搜索与 UGC 公域同步。</p>
     <p class="note">口径：资料库「2025 / 2026 年产品方案」。2026 截至 11 月 20 日。响应等数字为方案内基线 / 目标或立项测算。</p>
   </footer>
 </section>
