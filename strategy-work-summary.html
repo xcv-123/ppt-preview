@@ -191,7 +191,7 @@
     display: none;
   }
   .page-user .duo {
-    flex: 7 1 0;
+    flex: 1 1 auto;
     min-height: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -309,78 +309,6 @@
     color: var(--ink);
     font-weight: 700;
   }
-  .page-user .through {
-    display: grid;
-    grid-template-columns: 72px 1fr;
-    gap: 8px 10px;
-    align-items: stretch;
-    padding: 8px 10px;
-    border-radius: 6px;
-    flex: 3 1 0;
-    min-height: 0;
-    margin-top: 0;
-  }
-  .page-user .through .lab {
-    writing-mode: horizontal-tb;
-    font-size: 12px;
-    font-weight: 750;
-    color: var(--gd);
-    letter-spacing: .06em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.25;
-    background: #fff;
-    border: 1px solid var(--gm);
-    border-radius: 5px;
-    padding: 6px 4px;
-  }
-  .page-user .through .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 6px 8px;
-    min-width: 0;
-    min-height: 0;
-    height: 100%;
-  }
-  .page-user .through .item {
-    display: grid;
-    grid-template-columns: 92px 1fr;
-    gap: 8px;
-    align-items: center;
-    min-width: 0;
-    min-height: 0;
-    height: 100%;
-    background: #fff;
-    border: 1px solid var(--gm);
-    border-radius: 5px;
-    padding: 6px 8px;
-  }
-  .page-user .through .item .t {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    font-size: 11.5px;
-    font-weight: 750;
-    color: var(--gd);
-    background: var(--gs);
-    border: 1px solid var(--gm);
-    border-radius: 3px;
-    padding: 5px 4px;
-    line-height: 1.2;
-    white-space: nowrap;
-  }
-  .page-user .through .item p {
-    margin: 0;
-    font-size: 11px;
-    line-height: 1.35;
-    color: var(--ink2);
-  }
-
   .page-user .close {
     padding-top: 4px;
     gap: 10px;
@@ -683,7 +611,7 @@
     <div class="who">
       <b>LEAPMOTOR</b>
       两列重点场景：场景 → 我做了什么 → 满意度<br>
-      主视觉：潜客 / 车主；底部轻量全场景贯通
+      潜客 · 售前　｜　车主 · 售后
     </div>
   </header>
   <hr class="rule">
@@ -703,10 +631,11 @@
         <ul class="do">
           <li><span class="k">查看口碑</span>口碑取消问卷，改抓汽车之家：1.0 精简维度 → 2.0 抓取 → 3.0 统一历史口径，让潜客直接查看真实口碑。</li>
           <li><span class="k">内容种草</span>创作者与 UGC 内容可触达潜客；专题页 uid / openid 溯源，分享组件统一，公域种草能回到站内量效果。</li>
+          <li><span class="k">年终报告</span>支持生成、分享与抽奖，售前也能回顾互动成绩并二次传播。</li>
           <li><span class="k">转介绍接受邀请</span>接受邀请页先勾隐私再发验证码；邀请码「6 个月未留资」改为按注册时间起算，减少误伤。</li>
           <li><span class="k">消息订阅通知</span>补齐潜客消息订阅能力，活动 / 试驾 / 跟进节点可触达，减少错过关键通知。</li>
         </ul>
-        <p class="sat"><b>满意度：</b>少被二次问卷打扰，真实口碑与种草内容看得清；接受邀请流程合规清楚；关键节点有通知，少漏跟进。</p>
+        <p class="sat"><b>满意度：</b>少被二次问卷打扰，真实口碑与种草内容看得清；有成绩可晒；接受邀请流程合规清楚；关键节点有通知，少漏跟进。</p>
       </div>
     </article>
 
@@ -724,38 +653,20 @@
         <ul class="do">
           <li><span class="k">转介绍活动</span>海报五版进个人素材库；奖励改为绑车核销保养券；试驾车绑车人取消邀请资格，售后可持续邀友裂变。</li>
           <li><span class="k">口碑活动</span>支持售后口碑发布，真实用车表达可持续产出，反哺潜客种草与公域内容供给。</li>
+          <li><span class="k">创作者活动</span>平台 0→1；申诉、AI 审贴、分层配额；车主可持续发帖，服务公域内容供给。</li>
+          <li><span class="k">年终报告</span>可生成、分享与抽奖，售后回顾用车 / 互动成绩，沉淀可晒可邀的情感触点。</li>
+          <li><span class="k">AI 搜索（充电）</span>站内 AI 搜索热度可配；充电手册 / 资讯 / 素材做成 RAG，更快找到功能、活动与充电答案。</li>
           <li><span class="k">车主课堂</span>课堂改为逐题反馈；功能 code 可多选推送；试驾车企微批量解锁最多 2000 台，减少门店重复答题。</li>
           <li><span class="k">专属服务群</span>服务管家 IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长；叠加运营闭环、移动端、五项自动化与群机器人，一对多跟进。</li>
         </ul>
-        <p class="sat"><b>满意度：</b>学功能即时知道对错，功能开通更快；问得到人、跟得上进度，活动与服务不断档。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
+        <p class="sat"><b>满意度：</b>学功能即时知道对错，功能开通更快；搜得到、问得清充电；问得到人、跟得上进度，活动与服务不断档。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
       </div>
     </article>
   </div>
 
-  <div class="through">
-    <div class="lab">全场景贯通</div>
-    <div class="items">
-      <div class="item">
-        <span class="t">创作者活动</span>
-        <p>平台 0→1；申诉、AI 审贴、分层配额；潜客 / 车主均可参与，服务公域内容供给。</p>
-      </div>
-      <div class="item">
-        <span class="t">年终报告</span>
-        <p>可生成、分享与抽奖；售前售后都能晒成绩，沉淀可传播的情感触点。</p>
-      </div>
-      <div class="item">
-        <span class="t">AI 搜索</span>
-        <p>站内可搜、热度可配；更快找到活动、功能与内容，减少搜不到、问不明。</p>
-      </div>
-      <div class="item">
-        <span class="t">UGC 公域同步</span>
-        <p>内容可同步抖音 / 小红书；发得出去也能回流站内量化，放大种草链路。</p>
-      </div>
-    </div>
-  </div>
 
   <footer class="close">
-    <p>领导记两句：潜客售前看得到真实口碑，接受邀请与消息订阅顺畅；车主售后能参与活动 / 课堂 / 口碑，并能自动进专属服务群。</p>
+    <p>领导记两句：潜客售前看得到真实口碑与种草内容，年终报告可晒，接受邀请与消息订阅顺畅；车主售后能玩转介绍 / 口碑 / 创作者 / 课堂，并有 AI 搜索（充电）与专属服务群托底。</p>
     <p class="note">口径：资料库「2025 / 2026 年产品方案」。2026 截至 11 月 20 日。响应等数字为方案内基线 / 目标或立项测算。</p>
   </footer>
 </section>
