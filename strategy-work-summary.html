@@ -355,6 +355,12 @@
   .page-user .duo-bd .do:not(.do-flow) li:last-child {
     border-bottom: 0;
   }
+  .page-user .duo-card.soft .do-flow .row {
+    grid-template-columns: 70px 108px 1fr;
+  }
+  .page-user .duo-card.soft .do-flow .arr {
+    width: 70px;
+  }
   .page-user .duo-bd .sat {
     margin: 8px 0 0;
     flex: 0 0 auto;
@@ -719,28 +725,48 @@
           <span class="role">车主</span>
           <span class="stage"> · 售后</span>
         </div>
-        <em>活动参与与专属服务</em>
+        <em>下单 → 交付 → 绑定 → 智驾 → 咨询 → 感知</em>
       </div>
       <div class="duo-bd">
-        <div class="scene">场景 · 学功能、开权限，并持续参与活动；自动进入专属服务群，享受一对多服务</div>
+        <div class="scene">场景 · 沿用车旅程持续参与活动、学功能开权限，并在售后问得到人</div>
         <p class="do-label">我做了什么</p>
-        <ul class="do">
-          <li><span class="k">转介绍活动</span>海报五版进个人素材库；奖励改为绑车核销保养券；试驾车绑车人取消邀请资格，售后可持续邀友裂变。</li>
-          <li><span class="k">口碑活动</span>支持售后口碑发布，真实用车表达可持续产出，反哺潜客种草与公域内容供给。</li>
-          <li><span class="k">创作者活动</span>平台 0→1；申诉、AI 审贴、分层配额；车主可持续发帖，服务公域内容供给。</li>
-          <li><span class="k">年终报告</span>可生成、分享与抽奖，售后回顾用车 / 互动成绩，沉淀可晒可邀的情感触点。</li>
-          <li><span class="k">AI 搜索（充电）</span>站内 AI 搜索热度可配；充电手册 / 资讯 / 素材做成 RAG，更快找到功能、活动与充电答案。</li>
-          <li><span class="k">车主课堂</span>课堂改为逐题反馈；功能 code 可多选推送；试驾车企微批量解锁最多 2000 台，减少门店重复答题。</li>
-          <li><span class="k">专属服务群</span>服务管家 IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长；叠加运营闭环、移动端、五项自动化与群机器人，一对多跟进。</li>
+        <ul class="do do-flow">
+          <li>
+            <div class="row"><span class="st">新车下单</span><span class="k">转介绍活动</span><span class="anno">下单后可参与转介绍并进入专属服务群：海报五版进个人素材库；奖励改为绑车核销保养券；试驾车绑车人取消邀请资格。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">新车交付</span><span class="k">口碑活动</span><span class="anno">交付后可参与口碑活动：真实用车表达可持续产出，反哺潜客种草与公域内容供给。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">新车绑定</span><span class="k">创作者活动</span><span class="anno">绑车后可参与创作者活动：平台 0→1；申诉、AI 审贴、分层配额；车主可持续发帖，服务公域内容供给。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">智驾功能激活</span><span class="k">车主课堂</span><span class="anno">智驾功能激活时学功能：课堂改为逐题反馈；功能 code 可多选推送；试驾车企微批量解锁最多 2000 台。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">售后咨询</span><span class="k">AI 搜索（充电）</span><span class="anno">APP 内搜索：站内 AI 搜索热度可配；充电手册 / 资讯 / 素材做成 RAG，更快找到功能、活动与充电答案。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">售后咨询</span><span class="k">专属服务群</span><span class="anno">专属群聊一对多服务：IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长；叠加运营闭环、移动端、五项自动化与群机器人。</span></div>
+            <div class="arr">↓</div>
+          </li>
+          <li>
+            <div class="row"><span class="st">品牌感知</span><span class="k">年终报告</span><span class="anno">强化品牌感知：可生成、分享与抽奖，售后回顾用车 / 互动成绩，沉淀可晒可邀的情感触点。</span></div>
+          </li>
         </ul>
-        <p class="sat"><b>满意度：</b>学功能即时知道对错，功能开通更快；搜得到、问得清充电；问得到人、跟得上进度，活动与服务不断档。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
+        <p class="sat"><b>满意度：</b>下单到用车节点都有可参与活动；学功能即时知道对错；搜得到、问得清、群里跟得上。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
       </div>
     </article>
   </div>
 
 
   <footer class="close">
-    <p>领导记两句：潜客售前按「官方/公域认知 → 感知 → 转化 → 触达」跑通；车主售后能玩转介绍 / 口碑 / 创作者 / 课堂，并有 AI 搜索（充电）与专属服务群托底。</p>
+    <p>领导记两句：潜客售前按「官方/公域认知 → 感知 → 转化 → 触达」跑通；车主售后按「下单 → 交付 → 绑定 → 智驾 → 咨询 → 感知」贯穿活动、课堂与服务。</p>
     <p class="note">口径：资料库「2025 / 2026 年产品方案」。2026 截至 11 月 20 日。响应等数字为方案内基线 / 目标或立项测算。</p>
   </footer>
 </section>
