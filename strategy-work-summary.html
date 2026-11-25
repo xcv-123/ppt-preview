@@ -180,53 +180,68 @@
   .line p { margin: 0; font-size: 12.5px; line-height: 1.48; color: var(--ink2); }
   .line b { color: var(--ink); font-weight: 680; }
 
-  .cols { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .col {
+  .journey {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--gm);
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    min-height: 0;
     overflow: hidden;
   }
-  .col h2 {
-    margin: 0;
+  .j-head, .j-row {
+    display: grid;
+    grid-template-columns: 78px 1.05fr 1.05fr 1.25fr 1.45fr 1.2fr;
+    gap: 0;
+    min-height: 0;
+  }
+  .j-head {
     background: var(--gd);
     color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 6px 10px;
-    line-height: 1.35;
   }
-  .col h2 em { font-style: normal; font-weight: 500; opacity: .85; margin-right: 6px; }
-  .col .body {
-    padding: 7px 10px 8px;
+  .j-head > div {
+    padding: 7px 9px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    border-right: 1px solid rgba(255,255,255,.18);
+  }
+  .j-head > div:last-child { border-right: 0; }
+  .j-row { flex: 1; border-top: 1px solid var(--gm); background: #fff; }
+  .j-row:nth-child(odd) { background: #f7fbf8; }
+  .j-who {
+    background: var(--gs);
+    border-right: 1px solid var(--gm);
+    padding: 10px 8px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    min-height: 0;
-    flex: 1;
+    justify-content: center;
+    gap: 3px;
   }
-  .gist { margin: 0; font-size: 11.5px; line-height: 1.4; color: var(--ink2); }
-  .block h3 {
-    margin: 0 0 3px;
-    font-size: 11px;
-    letter-spacing: .08em;
+  .j-who .role { font-size: 14px; font-weight: 750; color: var(--gd); line-height: 1.25; }
+  .j-who .job { font-size: 10.5px; color: var(--ink2); line-height: 1.35; }
+  .j-cell {
+    padding: 8px 9px;
+    border-right: 1px solid var(--line);
+    font-size: 12px;
+    line-height: 1.42;
+    color: var(--ink2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+  }
+  .j-cell:last-child { border-right: 0; }
+  .j-cell b { color: var(--ink); font-weight: 680; }
+  .j-cell .step {
+    font-size: 10.5px;
     color: var(--g);
-    font-weight: 750;
+    font-weight: 700;
+    letter-spacing: .04em;
   }
-  .item { margin: 0 0 4px; font-size: 11.5px; line-height: 1.38; color: var(--ink2); }
-  .item:last-child { margin-bottom: 0; }
-  .item b { color: var(--ink); font-weight: 680; }
-  .proof {
-    margin-top: auto;
-    background: var(--gs);
-    border-radius: 6px;
-    padding: 6px 8px;
-  }
-  .proof h3 { margin: 0 0 2px; font-size: 11px; color: var(--gd); font-weight: 750; }
-  .proof p { margin: 0; font-size: 11px; line-height: 1.4; color: var(--ink2); }
+  .j-cell.pain { background: #fffaf6; }
+  .j-cell.fix { background: #f3faf6; }
+  .j-cell.gain { background: #eef7f1; }
 
   .close {
     border-top: 1px solid var(--line);
@@ -344,87 +359,125 @@
   <header class="top">
     <div>
       <div class="kicker">02　用户视角 · 我对用户的贡献</div>
-      <h1>三类用户，各自少掉什么麻烦</h1>
+      <h1>用户旅程地图：三类用户少掉的麻烦</h1>
     </div>
     <div class="who">
       <b>LEAPMOTOR</b>
-      第 1 页写业务贡献<br>
-      这一页写用户侧变化
+      读功能清单，读旅程<br>
+      场景 → 卡点 → 交付 → 结果
     </div>
   </header>
   <hr class="rule">
 
-  <div class="cols">
-    <article class="col">
-      <h2><em>01</em>车主 · 问得到、跟得上、答得清</h2>
-      <div class="body">
-        <p class="gist">过去：APP 里问不到人，管家离开电脑就漏单，充电问题反复问还答不准。现在：群能建、待办能推、常见问题系统先答。</p>
-        <div class="block">
-          <h3>用户感知变化</h3>
-          <p class="item"><b>问得到人。</b>人工客服答不上来时自动建群，拉入门店管家、总部管家、店长；企微工作台也能处理，离开电脑不再丢待办。</p>
-          <p class="item"><b>跟得上进度。</b>敏感词自动建单，跟进单强制截图，推送按订单 / 充电桩状态触发；工单带前后各 20 条群消息，不用用户把故事再说一遍。</p>
-          <p class="item"><b>答得清充电。</b>手册、资讯、IM 素材做成 RAG。只答充电；高压用电、费用、需到店诊断、改装破解给固定拒绝话术，宁可不答也不编造。</p>
-        </div>
-        <div class="block">
-          <h3>交付对应</h3>
-          <p class="item">服务管家 IM：一期建群 → 运营闭环 → 移动端 → 组织与根因 → 五项自动化 → 群机器人独立回复。</p>
-          <p class="item">客户主体从 uid 改为 vin；会话直接带上用户信息与销服维修记录，管家不用靠记忆补位。</p>
-        </div>
-        <div class="proof">
-          <h3>用户侧目标</h3>
-          <p>机器人响应由 5 分钟改为目标 2 秒，覆盖 70% 重复咨询，待办及时率由 60% 提到 95%。RAG：充电问题回答率 60%，二次搜索率 10%，首响不超过 3 秒。工单响应由 30 分钟改为 1 分钟。</p>
-        </div>
-      </div>
-    </article>
+  <div class="sec">
+    <h3>读图方式</h3>
+    <span>每一行是一类用户的主旅程。橙色偏卡点，绿色偏交付与结果。目标数字仍是方案内基线 / 目标，不是经营结果。</span>
+  </div>
 
-    <article class="col">
-      <h2><em>02</em>创作者 · 愿意发、发得出、审得明</h2>
-      <div class="body">
-        <p class="gist">过去：只有 KOC 能参加，规则写在图里靠人读，未传截图占 36.66%，不通过也不知道为什么。现在：普通人也能参与，规范清楚，可申诉，理由对外。</p>
-        <div class="block">
-          <h3>用户感知变化</h3>
-          <p class="item"><b>愿意发。</b>2025 年建起招募、任务、奖励和站外发帖；2026 年开放普通用户，人群扩到潜客、共同用车人、预定车主，不只绑死在达人池。</p>
-          <p class="item"><b>发得出。</b>补上传规范、链接预览、截图裁剪示例、流量奖截止前提醒；站外覆盖抖音 / 小红书 / 汽车之家 / 懂车帝 / 头条 / 微博。</p>
-          <p class="item"><b>审得明。</b>每人每活动限申诉 1 次；运营审过的结果模型不能改写；不通过理由自动对外；按人群限制单日报名名额，减少羊毛党挤占。</p>
-        </div>
-        <div class="block">
-          <h3>交付对应</h3>
-          <p class="item">创作者平台 13 份方案：OCR → 申诉 → AI 自动审核 → 开放人群 → 分层配额 → 数皆看板与补推。</p>
-          <p class="item">审核优先级固定为运营、规则、AI。硬条件走固定逻辑，模型只判模糊项。</p>
-        </div>
-        <div class="proof">
-          <h3>用户侧结果</h3>
-          <p>从「报名工具」变成「公域发帖供给中台」。用户知道怎么传、传完能否申诉、不通过为什么；运营也能自己用 OCR 双后台验识别，再开放自动判奖。</p>
-        </div>
-      </div>
-    </article>
+  <div class="journey">
+    <div class="j-head">
+      <div>用户</div>
+      <div>01 场景触发</div>
+      <div>02 关键动作</div>
+      <div>03 原来的卡点</div>
+      <div>04 我交付的能力</div>
+      <div>05 用户得到的结果</div>
+    </div>
 
-    <article class="col">
-      <h2><em>03</em>访客 · 少打扰、看得真、搜得着</h2>
-      <div class="body">
-        <p class="gist">过去：口碑靠问卷二次打扰，搜索不好用，昵称头像和点赞风险只能事后删。现在：公域口碑可抓取，搜索可答充电，风控能拦也能重置。</p>
-        <div class="block">
-          <h3>用户感知变化</h3>
-          <p class="item"><b>少打扰。</b>口碑取消问卷，改抓汽车之家；共同用车人也能答车主课堂，但解锁只作用在绑定车辆，避免误开。</p>
-          <p class="item"><b>看得真。</b>口碑维度精简并分历史口径；UGC 同步公域后，站内也能看到真实帖；分享与专题页可溯源，不把渠道效果糊在一起。</p>
-          <p class="item"><b>搜得着、更安全。</b>话题和个人主页可搜；充电场景 RAG 只答该答的；风控从事后删补到机审、人审、可重置，昵称头像签名可干预。</p>
-        </div>
-        <div class="block">
-          <h3>交付对应</h3>
-          <p class="item">口碑 1.0 → 2.0 → 3.0；搜索热度可配与 AI 搜索；专题页 uid / openid 溯源与渠道看板。</p>
-          <p class="item">注销按身份核验；鸿蒙扫一扫与「我的」对齐，访客在不同端看到的入口一致。</p>
-        </div>
-        <div class="proof">
-          <h3>用户侧口径</h3>
-          <p>口碑指标从回收量改为点评量、单条处理耗时、详情转化。转介绍奖励改为绑车核销、试驾车取消邀请资格，减少访客被无效激励打扰；另有 1 个需求主动废弃止损。</p>
-        </div>
+    <div class="j-row">
+      <div class="j-who">
+        <div class="role">车主</div>
+        <div class="job">问得到人<br>跟得上进度</div>
       </div>
-    </article>
+      <div class="j-cell">
+        <span class="step">用车 / 售后</span>
+        <span>APP 里要问车、问售后、问充电；门店和总部要跟进同一件事。</span>
+      </div>
+      <div class="j-cell">
+        <span class="step">提问 → 等回复</span>
+        <span>进群咨询、等管家处理、反复补充上下文，常见充电问题再问一遍。</span>
+      </div>
+      <div class="j-cell pain">
+        <span class="step">麻烦</span>
+        <b>问不到人，离开电脑就漏单，充电反复问还答不准。</b>
+        <span>故事要讲多次，待办靠人记得发。</span>
+      </div>
+      <div class="j-cell fix">
+        <span class="step">能力</span>
+        <b>服务管家 IM 全链路 + 充电 RAG + 群机器人。</b>
+        <span>自动建群 → 运营闭环 → 移动端 → 五项自动化 → 独立回复；会话带上用户与维修记录，客户主体改为 vin。</span>
+      </div>
+      <div class="j-cell gain">
+        <span class="step">结果</span>
+        <b>问得到、跟得上、答得清。</b>
+        <span>机器人响应目标 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；充电首响 ≤3 秒，答不准就拒答。</span>
+      </div>
+    </div>
+
+    <div class="j-row">
+      <div class="j-who">
+        <div class="role">创作者</div>
+        <div class="job">愿意发<br>发得出去</div>
+      </div>
+      <div class="j-cell">
+        <span class="step">公域发帖</span>
+        <span>参加活动、在抖音 / 小红书等发帖，换奖励或曝光。</span>
+      </div>
+      <div class="j-cell">
+        <span class="step">报名 → 上传</span>
+        <span>选活动、发站外帖、传截图 / 链接、等审核发奖。</span>
+      </div>
+      <div class="j-cell pain">
+        <span class="step">麻烦</span>
+        <b>只有 KOC 能参加，规则靠人读，未传截图占 36.66%。</b>
+        <span>不通过不知道为什么，也没有清晰申诉。</span>
+      </div>
+      <div class="j-cell fix">
+        <span class="step">能力</span>
+        <b>创作者平台从 0 到 1，再做成供给中台。</b>
+        <span>招募任务奖励 → OCR / 规范 / 申诉 → AI 审贴 → 开放普通用户 → 分层配额与补推；审核顺序运营 &gt; 规则 &gt; AI。</span>
+      </div>
+      <div class="j-cell gain">
+        <span class="step">结果</span>
+        <b>愿意发、发得出、审得明。</b>
+        <span>普通人也能参与；知道怎么传、能否申诉、不通过为什么；羊毛党挤占名额被收窄。</span>
+      </div>
+    </div>
+
+    <div class="j-row">
+      <div class="j-who">
+        <div class="role">访客</div>
+        <div class="job">少打扰<br>看得真</div>
+      </div>
+      <div class="j-cell">
+        <span class="step">逛社区 / 看车</span>
+        <span>看口碑、搜问题、从公域帖回流站内，比较是否值得继续。</span>
+      </div>
+      <div class="j-cell">
+        <span class="step">浏览 → 搜索</span>
+        <span>读点评、搜话题 / 主页、点分享链接进入专题页。</span>
+      </div>
+      <div class="j-cell pain">
+        <span class="step">麻烦</span>
+        <b>口碑靠问卷二次打扰，搜索不好用，风险只能事后删。</b>
+        <span>渠道效果糊在一起，不同端入口也不齐。</span>
+      </div>
+      <div class="j-cell fix">
+        <span class="step">能力</span>
+        <b>口碑抓公域 + 搜索可答 + 风控可重置。</b>
+        <span>取消问卷改抓汽车之家；话题 / 主页可搜；专题页 uid 溯源；昵称头像签名可人审重置；鸿蒙入口对齐。</span>
+      </div>
+      <div class="j-cell gain">
+        <span class="step">结果</span>
+        <b>少打扰、看得真、搜得着。</b>
+        <span>口碑指标改成点评量、处理耗时、详情转化；无效激励减少；内容风险从事后删变成可拦、可重置。</span>
+      </div>
+    </div>
   </div>
 
   <footer class="close">
-    <p>业务侧我把公域投放和车主服务做成可运转的子系统；用户侧对应的是三类变化：车主问得到、创作者发得清、访客少打扰。这也是申请 P4-A 的落地：主责子系统、改革程序、把方法写成规则后交给组织。</p>
-    <p class="note">口径：方案份数来自资料库「2025 / 2026 年产品方案」。2026 年统计截至 11 月 20 日，37 份已扣除 2 份重复。响应时长、合规率、回答率、ROI 均为方案内基线、目标或立项测算。</p>
+    <p>第 1 页看业务组合上我建了什么；这一页看三类用户少掉了什么麻烦。旅程图比功能地图更合适：功能地图讲「有什么」，旅程图讲「用户卡在哪、我改了哪一步」。</p>
+    <p class="note">口径：方案份数来自资料库「2025 / 2026 年产品方案」。2026 年统计截至 11 月 20 日。响应时长、合规率、回答率均为方案内基线、目标或立项测算。</p>
   </footer>
 </section>
 </section>
