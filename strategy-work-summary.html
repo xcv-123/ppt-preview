@@ -651,28 +651,53 @@
     flex: 1;
     min-height: 0;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 3px 2px;
+  }
+  .wf-lane {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    min-width: 0;
+  }
+  .wf-lane .lab {
+    flex: 0 0 42px;
+    font-size: 9.5px;
+    font-weight: 750;
+    color: #fff;
+    background: var(--gd);
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px 2px;
+    line-height: 1.2;
+  }
+  .wf-lane.tmp .lab { background: #2a7a4a; }
+  .wf-lane.fix .lab { background: #0d4f26; }
+  .wf-lane .steps {
+    flex: 1;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
-    align-content: center;
-    justify-content: center;
-    gap: 4px 2px;
-    padding: 4px 2px;
+    gap: 3px 2px;
+    min-width: 0;
   }
   .wf-flow .step {
     background: var(--gs);
     border: 1px solid var(--g);
     color: var(--gd);
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: 700;
-    line-height: 1.25;
-    padding: 6px 7px;
+    line-height: 1.2;
+    padding: 4px 5px;
     border-radius: 4px;
     text-align: center;
     white-space: nowrap;
   }
   .wf-flow .arr {
     color: var(--g);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     padding: 0 1px;
   }
@@ -1326,18 +1351,32 @@
                   <span>车主</span>
                   <span>门店员工</span>
                   <span>服务运营</span>
+                  <span>CC</span>
                 </div>
               </div>
               <div class="wf-col">
                 <div class="ct">售后服务过程</div>
                 <div class="wf-flow">
-                  <span class="step">咨询进入</span><span class="arr">→</span>
-                  <span class="step">自动建群</span><span class="arr">→</span>
-                  <span class="step">一对多服务</span><span class="arr">→</span>
-                  <span class="step">待办协同</span><span class="arr">→</span>
-                  <span class="step">工单留痕</span><span class="arr">→</span>
-                  <span class="step">移动跟进</span><span class="arr">→</span>
-                  <span class="step">闭环回访</span>
+                  <div class="wf-lane tmp">
+                    <div class="lab">临时群</div>
+                    <div class="steps">
+                      <span class="step">咨询进入</span><span class="arr">→</span>
+                      <span class="step">自动建群</span><span class="arr">→</span>
+                      <span class="step">一对多服务</span><span class="arr">→</span>
+                      <span class="step">问题解决</span><span class="arr">→</span>
+                      <span class="step">结案解散</span>
+                    </div>
+                  </div>
+                  <div class="wf-lane fix">
+                    <div class="lab">固定群</div>
+                    <div class="steps">
+                      <span class="step">专属群绑定</span><span class="arr">→</span>
+                      <span class="step">日常服务</span><span class="arr">→</span>
+                      <span class="step">待办协同</span><span class="arr">→</span>
+                      <span class="step">工单留痕</span><span class="arr">→</span>
+                      <span class="step">闭环回访</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="wf-col">
