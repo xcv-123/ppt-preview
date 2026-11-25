@@ -191,22 +191,57 @@
     display: none;
   }
   .page-user .through {
-    padding: 5px 10px;
-    gap: 8px;
-    border-radius: 6px;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 8px 12px;
+    align-items: start;
+    padding: 8px 12px 9px;
+    border-radius: 8px;
+    flex: 0 0 auto;
+    margin-top: auto;
   }
-  .page-user .through .lab { font-size: 12px; }
-  .page-user .through .items { gap: 5px; }
-  .page-user .through .items span {
+  .page-user .through .lab {
+    font-size: 12.5px;
+    font-weight: 750;
+    color: var(--gd);
+    letter-spacing: .06em;
+    padding-top: 2px;
+    white-space: nowrap;
+  }
+  .page-user .through .items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .page-user .through .item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .page-user .through .item .t {
+    display: inline-block;
+    width: fit-content;
     font-size: 11.5px;
+    font-weight: 750;
+    color: var(--gd);
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 4px;
     padding: 2px 7px;
   }
+  .page-user .through .item p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.35;
+    color: var(--ink2);
+  }
   .page-user .duo {
-    flex: 1;
-    min-height: 0;
+    flex: 0 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    align-items: stretch;
   }
   .page-user .duo-card {
     border: 1px solid var(--gm);
@@ -215,7 +250,6 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
-    min-height: 0;
     overflow: hidden;
   }
   .page-user .duo-card.soft { background: #f7fbf8; }
@@ -248,9 +282,8 @@
     padding: 10px 12px 11px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    flex: 1;
-    min-height: 0;
+    gap: 5px;
+    flex: 0 0 auto;
   }
   .page-user .duo-bd .scene {
     font-size: 12.5px;
@@ -270,11 +303,11 @@
     padding-left: 0;
     list-style: none;
     font-size: 12px;
-    line-height: 1.45;
+    line-height: 1.42;
     color: var(--ink2);
-    flex: 1 1 auto;
+    flex: 0 0 auto;
   }
-  .page-user .duo-bd .do li { margin: 0 0 6px; }
+  .page-user .duo-bd .do li { margin: 0 0 5px; }
   .page-user .duo-bd .do li:last-child { margin-bottom: 0; }
   .page-user .duo-bd .do .k {
     display: inline-block;
@@ -290,8 +323,7 @@
     vertical-align: 1px;
   }
   .page-user .duo-bd .sat {
-    margin: 0;
-    margin-top: auto;
+    margin: 2px 0 0;
     font-size: 12px;
     line-height: 1.4;
     color: var(--ink2);
@@ -605,20 +637,10 @@
     <div class="who">
       <b>LEAPMOTOR</b>
       两列重点场景：场景 → 我做了什么 → 满意度<br>
-      全场景贯通：创作者活动、年终报告、AI 搜索、UGC 公域同步
+      底部为全场景贯通能力
     </div>
   </header>
   <hr class="rule">
-
-  <div class="through">
-    <div class="lab">全场景贯通</div>
-    <div class="items">
-      <span>创作者活动</span>
-      <span>年终报告</span>
-      <span>AI 搜索</span>
-      <span>UGC 公域同步</span>
-    </div>
-  </div>
 
   <div class="duo">
     <article class="duo-card">
@@ -662,8 +684,30 @@
     </article>
   </div>
 
+  <div class="through">
+    <div class="lab">全场景贯通</div>
+    <div class="items">
+      <div class="item">
+        <span class="t">创作者活动</span>
+        <p>平台 0→1；申诉、AI 审贴、分层配额；潜客 / 车主可参与。</p>
+      </div>
+      <div class="item">
+        <span class="t">年终报告</span>
+        <p>可生成、分享与抽奖，售前售后都能晒成绩。</p>
+      </div>
+      <div class="item">
+        <span class="t">AI 搜索</span>
+        <p>站内可搜、热度可配，找活动与内容更快。</p>
+      </div>
+      <div class="item">
+        <span class="t">UGC 公域同步</span>
+        <p>内容可同步抖音 / 小红书，放大公域种草。</p>
+      </div>
+    </div>
+  </div>
+
   <footer class="close">
-    <p>领导记两句：潜客售前看得到真实口碑，接受邀请与消息订阅顺畅；车主售后能参与活动 / 课堂 / 口碑，并能自动进专属服务群。全场景贯通创作者活动、年终报告、AI 搜索与 UGC 公域同步。</p>
+    <p>领导记两句：潜客售前看得到真实口碑，接受邀请与消息订阅顺畅；车主售后能参与活动 / 课堂 / 口碑，并能自动进专属服务群。</p>
     <p class="note">口径：资料库「2025 / 2026 年产品方案」。2026 截至 11 月 20 日。响应等数字为方案内基线 / 目标或立项测算。</p>
   </footer>
 </section>
