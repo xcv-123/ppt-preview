@@ -184,8 +184,8 @@
     flex: 1;
     min-height: 0;
     display: grid;
-    grid-template-columns: 70px repeat(3, 1fr);
-    grid-template-rows: 34px 1fr 1fr;
+    grid-template-columns: 64px repeat(3, 1fr);
+    grid-template-rows: 30px 1fr 1fr;
     border: 1px solid var(--gm);
     border-radius: 8px;
     overflow: hidden;
@@ -197,9 +197,7 @@
   }
   .matrix > *:nth-child(4n) { border-right: 0; }
   .matrix > *:nth-last-child(-n+4) { border-bottom: 0; }
-  .mx-corner {
-    background: var(--gd);
-  }
+  .mx-corner { background: var(--gd); }
   .mx-col {
     background: var(--gd);
     color: #fff;
@@ -207,13 +205,13 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 750;
     letter-spacing: .06em;
   }
   .mx-col em {
     font-style: normal;
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 500;
     opacity: .85;
   }
@@ -224,41 +222,58 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
-    padding: 8px 4px;
+    padding: 6px 3px;
     text-align: center;
   }
   .mx-row .role {
     writing-mode: vertical-rl;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 750;
     color: var(--gd);
-    letter-spacing: .18em;
+    letter-spacing: .16em;
   }
   .mx-row .hint {
     writing-mode: vertical-rl;
-    font-size: 10.5px;
+    font-size: 10px;
     color: var(--ink2);
-    letter-spacing: .08em;
+    letter-spacing: .06em;
   }
   .mx-cell {
-    padding: 8px 10px 9px;
+    padding: 7px 8px 8px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     min-width: 0;
     background: #fff;
   }
   .mx-cell.soft { background: #f7fbf8; }
   .mx-cell .scene {
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 750;
     color: var(--g);
-    letter-spacing: .04em;
+    letter-spacing: .03em;
+    line-height: 1.35;
+  }
+  .mx-cell .chip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin: 1px 0 2px;
+  }
+  .mx-cell .chip span {
+    font-size: 10px;
+    line-height: 1.2;
+    color: var(--gd);
+    background: var(--gs);
+    border: 1px solid var(--gm);
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-weight: 650;
   }
   .mx-cell .do, .mx-cell .sat {
     margin: 0;
-    font-size: 11.5px;
-    line-height: 1.4;
+    font-size: 11px;
+    line-height: 1.38;
     color: var(--ink2);
   }
   .mx-cell .do b, .mx-cell .sat b {
@@ -273,9 +288,8 @@
   }
 
   .close {
-  .close {
     border-top: 1px solid var(--line);
-    padding-top: 6px;
+    padding-top: 5px;
     display: grid;
     grid-template-columns: 1fr 210px;
     gap: 12px;
@@ -389,45 +403,65 @@
   <header class="top">
     <div>
       <div class="kicker">02　用户视角 · 我对用户的贡献</div>
-      <h1>潜客 × 车主，在售前 / 售中 / 售后做了什么</h1>
+      <h1>潜客 × 车主 · 售前 / 售中 / 售后能力地图</h1>
     </div>
     <div class="who">
       <b>LEAPMOTOR</b>
-      每格三行：场景 · 我做了什么 · 满意度提升<br>
-      目标数字仍为方案内基线 / 目标
+      每格：场景 → 能力标签 → 我做了什么 → 满意度<br>
+      共用能力：年终报告、创作者、UGC 公域同步、AI 搜索
     </div>
   </header>
   <hr class="rule">
 
   <div class="sec">
     <h3>读图方式</h3>
-    <span>横看同一角色走过售前到售后；竖看同一阶段两类用户分别得到什么。满意度写的是用户感知变化，不是业务 GMV。</span>
+    <span>横看同一角色走完售前到售后；竖看同一阶段两类用户分别得到什么。绿色底是满意度感知。共用能力在售前两侧都有标注。</span>
   </div>
 
   <div class="matrix">
     <div class="mx-corner"></div>
-    <div class="mx-col">售前 <em>认知与种草</em></div>
-    <div class="mx-col">售中 <em>留资到成交</em></div>
-    <div class="mx-col">售后 <em>用车与服务</em></div>
+    <div class="mx-col">售前 <em>认知种草</em></div>
+    <div class="mx-col">售中 <em>留资成交</em></div>
+    <div class="mx-col">售后 <em>用车服务</em></div>
 
     <div class="mx-row">
       <div class="role">潜客</div>
       <div class="hint">想买车的人</div>
     </div>
     <div class="mx-cell">
-      <div class="scene">场景 · 看车、看口碑、被种草</div>
-      <p class="do"><b>我做了什么：</b>口碑取消问卷、改抓汽车之家；创作者平台与 UGC 同步抖音 / 小红书等公域发帖；搜索可配，充电场景可 RAG 问答；专题页可溯源，分享组件统一。</p>
-      <p class="sat"><b>满意度：</b>少被二次问卷打扰，公域真实内容更多，搜得到、看得真，从公域回到站内路径清楚。</p>
+      <div class="scene">场景 · 看车、看口碑、被公域内容种草</div>
+      <div class="chip">
+        <span>查看口碑</span>
+        <span>年终报告</span>
+        <span>创作者活动</span>
+        <span>UGC→抖音/小红书</span>
+        <span>AI 搜索</span>
+      </div>
+      <p class="do"><b>我做了什么：</b>口碑取消问卷、改抓汽车之家，1.0 精简维度 → 2.0 抓取 → 3.0 统一历史口径；创作者平台开放潜客参与；UGC 可同步抖音 / 小红书；搜索热度可配，并引入 AI 搜索 / 充电 RAG；年终报告可生成与分享；专题页 uid / openid 溯源，分享组件统一。</p>
+      <p class="sat"><b>满意度：</b>少被二次问卷打扰，公域真实口碑与内容更多；搜得到、看得真；从公域回流站内路径清楚，渠道效果可追踪。</p>
     </div>
     <div class="mx-cell soft">
-      <div class="scene">场景 · 留资、接受邀请、注册试驾</div>
-      <p class="do"><b>我做了什么：</b>注册渠道 2.0 覆盖 9 类场景并可配置线索下发；转介绍接受页先勾隐私再发验证码；登录浮层按渠道管理；邀请码「6 个月未留资」口径改为注册时间。</p>
-      <p class="sat"><b>满意度：</b>留资后跟进更准，隐私提示更清楚，不同渠道进入后体验一致，少被错误标签误伤。</p>
+      <div class="scene">场景 · 留资、接受转介绍邀请、注册试驾</div>
+      <div class="chip">
+        <span>注册渠道 2.0</span>
+        <span>转介绍接受页</span>
+        <span>登录浮层</span>
+        <span>线索下发</span>
+        <span>隐私合规</span>
+      </div>
+      <p class="do"><b>我做了什么：</b>注册渠道覆盖 APP / 小程序 / H5 / 转介绍 / 商城 / 官网试驾等 9 类场景，线索是否下发零小跑改为后台可配；接受邀请页先勾隐私再发验证码；登录浮层按渠道管理并可看 PV / UV；邀请码「6 个月未留资」改为按注册时间起算；D19 留资门店过滤；转介绍首页改任务中心并支持商品券。</p>
+      <p class="sat"><b>满意度：</b>留资后跟进更准，隐私提示清楚，不同入口体验一致；少被错误标签和无效激励误伤。</p>
     </div>
     <div class="mx-cell">
-      <div class="scene">场景 · 预定 / 共同用车，提前进入用车圈</div>
-      <p class="do"><b>我做了什么：</b>创作者平台向潜客、预定车主、共同用车人开放；车主课堂支持共同用车人答题，但功能解锁只作用绑定车辆；社区风控补到可重置，保护浏览体验。</p>
-      <p class="sat"><b>满意度：</b>进门前也能参与活动与学习，不被达人门槛挡在外面；内容更干净，误开功能风险下降。</p>
+      <div class="scene">场景 · 预定 / 共同用车，提前进入用车与社群</div>
+      <div class="chip">
+        <span>创作者开放人群</span>
+        <span>共同用车人课堂</span>
+        <span>社区风控</span>
+        <span>年终报告</span>
+      </div>
+      <p class="do"><b>我做了什么：</b>创作者平台人群扩到潜客、预定车主、共同用车人；车主课堂支持共同用车人答题，解锁只作用绑定车辆；社区风控补齐机审 / 人审 / 可重置；年终报告、AI 搜索在购前到购后早期持续可用。</p>
+      <p class="sat"><b>满意度：</b>进门前也能参与活动和学车，不被达人门槛挡住；内容更干净；误开功能风险下降。</p>
     </div>
 
     <div class="mx-row">
@@ -435,25 +469,46 @@
       <div class="hint">已购车的人</div>
     </div>
     <div class="mx-cell soft">
-      <div class="scene">场景 · 转介绍邀友、公域发帖种草</div>
-      <p class="do"><b>我做了什么：</b>转介绍海报连做五版到个人素材库；奖励改为绑车核销的保养券，试驾车绑车人取消邀请资格；创作者平台从 0 到 1，再到申诉、AI 审贴与分层配额。</p>
-      <p class="sat"><b>满意度：</b>愿意邀、放心邀；发帖规范清楚、可申诉、不通过有理由；认真分享的人少被羊毛党挤占。</p>
+      <div class="scene">场景 · 转介绍邀友、公域发帖帮品牌种草</div>
+      <div class="chip">
+        <span>转介绍</span>
+        <span>创作者活动</span>
+        <span>UGC→抖音/小红书</span>
+        <span>年终报告</span>
+        <span>AI 搜索</span>
+      </div>
+      <p class="do"><b>我做了什么：</b>转介绍海报五版到个人素材库，奖励改为绑车核销保养券，试驾车绑车人取消邀请资格；创作者平台从 0 到 1，再到申诉、AI 审贴、分层配额；UGC 可同步抖音 / 小红书；年终报告可生成 / 分享 / 抽奖；站内亦可 AI 搜索。</p>
+      <p class="sat"><b>满意度：</b>愿意邀、放心邀；发帖规范清楚、可申诉、不通过有理由；认真分享的人少被羊毛党挤占；有内容可发、有成绩可晒。</p>
     </div>
     <div class="mx-cell">
       <div class="scene">场景 · 提车绑车、学功能、开权限</div>
-      <p class="do"><b>我做了什么：</b>车主课堂改为逐题反馈并下线失效排行榜；功能 code 可多选推送零云；试驾车可用企微批量解锁，单次最多 2000 台；注销按绑车人 / 共同用车人 / 潜客分身份核验。</p>
-      <p class="sat"><b>满意度：</b>学功能不再答完才知道对错；功能开通更快；换号注销有明确路径，少踩合规坑。</p>
+      <div class="chip">
+        <span>车主课堂</span>
+        <span>功能解锁</span>
+        <span>注销换号</span>
+        <span>鸿蒙对齐</span>
+      </div>
+      <p class="do"><b>我做了什么：</b>车主课堂改为逐题反馈并下线失效排行榜，功能 code 可多选推送零云；试驾车可用企微批量解锁，单次最多 2000 台；注销按绑车人 / 共同用车人 / 潜客分身份核验；鸿蒙扫一扫与「我的」入口对齐安卓 / iOS。</p>
+      <p class="sat"><b>满意度：</b>学功能即时知道对错，不再答完才揭晓；功能开通更快；换号注销路径清楚，多端入口一致。</p>
     </div>
     <div class="mx-cell soft">
-      <div class="scene">场景 · 问售后、问充电、等跟进</div>
-      <p class="do"><b>我做了什么：</b>服务管家 IM 从自动建群做到五项自动化与群机器人；充电手册 / 资讯 / 素材做成 RAG；会话带上用户与维修记录，客户主体改为 vin；工单带前后各 20 条群消息。</p>
-      <p class="sat"><b>满意度：</b>问得到人、跟得上进度、答得清充电。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
+      <div class="scene">场景 · 用车中持续活跃，并进入专属服务群</div>
+      <div class="chip">
+        <span>创作者活动</span>
+        <span>转介绍活动</span>
+        <span>车主课堂</span>
+        <span>口碑发布</span>
+        <span>专属服务群</span>
+        <span>一对多服务</span>
+      </div>
+      <p class="do"><b>我做了什么：</b>售后可持续参与创作者活动、转介绍活动、车主课堂与口碑发布；服务管家 IM 答不上来时自动建群，拉入门店管家 / 总部管家 / 店长，形成一对多专属服务；再叠加运营闭环、移动端、五项自动化与群机器人；充电手册 / 资讯 / 素材做成 RAG；会话带维修记录，客户主体改为 vin。</p>
+      <p class="sat"><b>满意度：</b>问得到人、跟得上进度、答得清充电，同时仍能发帖、邀友、学功能。方案目标：响应 5 分钟→2 秒，覆盖 70% 重复咨询；待办及时率 60%→95%；工单响应 30 分钟→1 分钟。</p>
     </div>
   </div>
 
   <footer class="close">
-    <p>领导看这一页只需记住：潜客侧我把「看得真、留得准、进得来」做顺；车主侧我把「邀得出、学得会、问得到」做顺。满意度提升落在具体场景，而不是抽象功能清单。</p>
-    <p class="note">口径：材料来自资料库「2025 / 2026 年产品方案」。2026 年统计截至 11 月 20 日。响应时长等为方案内基线 / 目标或立项测算，不写成已达成经营结果。</p>
+    <p>领导记两句即可：潜客售前先看得到真实口碑与公域内容；车主售后既能玩转介绍 / 创作者 / 课堂 / 口碑，又能自动进专属服务群享受一对多服务。共用底座是年终报告、创作者、UGC 公域同步与 AI 搜索。</p>
+    <p class="note">口径：资料库「2025 / 2026 年产品方案」。2026 截至 11 月 20 日。响应等数字为方案内基线 / 目标或立项测算。</p>
   </footer>
 </section>
 </body>
