@@ -383,6 +383,125 @@
   .page-user .close p { font-size: 11.5px; line-height: 1.35; }
   .page-user .close .note { font-size: 10px; }
 
+  /* page 3 cases */
+  .page-case {
+    padding: 16px 22px 12px;
+    gap: 8px;
+  }
+  .page-case h1 { font-size: 20px; }
+  .page-case .who { font-size: 11.5px; line-height: 1.35; }
+  .cases {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .case {
+    border: 1.5px solid var(--g);
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .case-hd {
+    background: var(--gd);
+    color: #fff;
+    padding: 9px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .case-hd .no {
+    font-size: 11px;
+    letter-spacing: .1em;
+    font-weight: 650;
+    opacity: .88;
+  }
+  .case-hd h3 {
+    margin: 0;
+    font-size: 14.5px;
+    font-weight: 750;
+    line-height: 1.3;
+  }
+  .case-hd .align {
+    font-size: 11.5px;
+    opacity: .9;
+  }
+  .case-bd {
+    padding: 10px 12px 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+    min-height: 0;
+  }
+  .case-bd .flow-lab {
+    margin: 0;
+    font-size: 11.5px;
+    font-weight: 750;
+    color: var(--g);
+    letter-spacing: .06em;
+  }
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-height: 0;
+  }
+  .flow-step {
+    border: 1px solid var(--gm);
+    border-radius: 6px;
+    background: #f7fbf8;
+    padding: 7px 9px;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+  .flow-step .ph {
+    font-size: 12px;
+    font-weight: 750;
+    color: var(--gd);
+    line-height: 1.3;
+  }
+  .flow-step .body {
+    margin: 0;
+    font-size: 11.5px;
+    line-height: 1.4;
+    color: var(--ink2);
+  }
+  .flow-step .body b { color: var(--ink); font-weight: 700; }
+  .flow-step.out {
+    background: var(--gs);
+    border-color: var(--g);
+  }
+  .flow-step .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  .flow-step .chips span {
+    font-size: 10.5px;
+    font-weight: 650;
+    color: var(--gd);
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 3px;
+    padding: 1px 6px;
+  }
+  .case-note {
+    margin: 0;
+    font-size: 10.5px;
+    color: var(--ink3);
+    line-height: 1.35;
+  }
+
   .matrix {
     flex: 1;
     min-height: 0;
@@ -569,7 +688,7 @@
 </style>
 </head>
 <body>
-<p class="hint">两页横向幻灯片。打印或导出 PDF 时选择纸张 13.333 × 7.5 英寸（16:9）、边距无、勾选背景图形。带箭头的数字是方案内的基线、目标或立项测算。</p>
+<p class="hint">三页横向幻灯片。打印或导出 PDF 时选择纸张 13.333 × 7.5 英寸（16:9）、边距无、勾选背景图形。带箭头的数字是方案内的基线、目标或立项测算。</p>
 
 <section class="page">
   <header class="top">
@@ -773,6 +892,110 @@
     <p>领导记两句：潜客售前按「官方/公域认知 → 感知 → 转化 → 触达」跑通；车主售后按「下单 → 交付 → 绑定 → 智驾 → 咨询 → 感知」贯穿活动、课堂与服务。</p>
     <p class="note">口径：资料库「2025 / 2026 年产品方案」。2026 截至 11 月 20 日。响应等数字为方案内基线 / 目标或立项测算。</p>
   </footer>
+</section>
+
+<section class="page page-case">
+  <header class="top">
+    <div>
+      <div class="kicker">03　专业案例 · 我对关键问题的拆解</div>
+      <h1>两个主责案例：创作者平台　｜　服务 SCRM</h1>
+    </div>
+    <div class="who">
+      <b>LEAPMOTOR</b>
+      结构：背景 → 问题 → 行动 → 成果<br>
+      分别对齐「公域投放效率」「车主服务」
+    </div>
+  </header>
+  <hr class="rule">
+
+  <div class="cases">
+    <article class="case">
+      <div class="case-hd">
+        <div class="no">案例 01</div>
+        <h3>面向车主和全体员工的创作者平台</h3>
+        <div class="align">战略对齐 · 提升公域投放效率</div>
+      </div>
+      <div class="case-bd">
+        <p class="flow-lab">业务流</p>
+        <div class="flow">
+          <div class="flow-step">
+            <div class="ph">背景</div>
+            <p class="body">2025 年初，公域内容仍依赖人工拉群、表格维护达人 / KOC；车主与员工发帖散落在多个社媒平台，任务、审核、奖励链路未产品化。</p>
+          </div>
+          <div class="flow-step">
+            <div class="ph">问题</div>
+            <p class="body">
+              <b>①</b> 公域内容素材的转化难统计；
+              <b>②</b> KOC 数据管理与维护困难；
+              <b>③</b> 审核量大，奖励发放延迟严重；
+              <b>④</b> 运营效率低，难规模化复制。
+            </p>
+          </div>
+          <div class="flow-step">
+            <div class="ph">行动</div>
+            <div class="body">
+              以社媒平台为供给出口，搭创作者中台：任务、报名、OCR 验真、AI / 人审、申诉、分层配额、奖励发放；并开放车主与全员营销员工发帖。
+              <div class="chips">
+                <span>抖音</span><span>小红书</span><span>汽车之家</span><span>懂车帝</span><span>头条</span><span>微博</span>
+              </div>
+            </div>
+          </div>
+          <div class="flow-step out">
+            <div class="ph">成果</div>
+            <p class="body">
+              <b>数据：</b>公域分发覆盖 6 大平台；2026 创作者相关主投入约 13 份方案，补齐 OCR / 申诉 / AI 审贴 / 分层配额。<br>
+              <b>业务：</b>从表格运营升级为可审核、可分层、可激励的内容供给中台；车主 + 员工都能在公域发帖获奖励，投放素材供给更稳、回流可溯源。
+            </p>
+          </div>
+        </div>
+        <p class="case-note">注：转化类精确数值以业务看板当期口径为准；此处强调链路从不可统计 → 可运营。</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-hd">
+        <div class="no">案例 02</div>
+        <h3>服务车主的 SCRM：门店与总部管家协同</h3>
+        <div class="align">战略对齐 · 提升车主服务</div>
+      </div>
+      <div class="case-bd">
+        <p class="flow-lab">业务流</p>
+        <div class="flow">
+          <div class="flow-step">
+            <div class="ph">背景</div>
+            <p class="body">售后咨询与跟进长期依赖一对一沟通和个人经验；门店管家、总部管家、服务运营各自入口不同，信息不在同一会话里，重复咨询与漏跟进并存。</p>
+          </div>
+          <div class="flow-step">
+            <div class="ph">问题</div>
+            <p class="body">
+              渠道入口割裂：
+              <b>车主</b>找不到稳定服务入口；
+              <b>门店</b>跟进难协同、难留痕；
+              <b>服务运营</b>难做权限、自动化与质检。
+              需要一套面向门店与总部管家的 SCRM，把问得到、跟得上做成系统能力。
+            </p>
+          </div>
+          <div class="flow-step">
+            <div class="ph">行动</div>
+            <div class="body">
+              按三类入口建服务管家 IM / SCRM：车主侧进专属服务群；门店 / 总部管家同群协同；服务运营配置权限、自动化与机器人。
+              <div class="chips">
+                <span>车主入口</span><span>门店管家</span><span>总部管家</span><span>服务运营</span>
+              </div>
+            </div>
+          </div>
+          <div class="flow-step out">
+            <div class="ph">成果</div>
+            <p class="body">
+              <b>数据：</b>五项自动化立项测算投入 4.4 万 / 22 人天，年收益约 36 万，ROI ≈ 7.1；方案目标响应 5 分钟→2 秒、待办及时率 60%→95%、工单响应 30 分钟→1 分钟。<br>
+              <b>业务：</b>从「人肉跟进」升级为自动建群 + 一对多专属服务 + 群机器人；门店与总部同屏协同，重复咨询先由系统消化。
+            </p>
+          </div>
+        </div>
+        <p class="case-note">注：响应等数字为方案内基线 / 目标或立项测算，答辩时按当期看板校准。</p>
+      </div>
+    </article>
+  </div>
 </section>
 </body>
 </html>
