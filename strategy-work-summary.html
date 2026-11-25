@@ -383,121 +383,219 @@
   .page-user .close p { font-size: 11.5px; line-height: 1.35; }
   .page-user .close .note { font-size: 10px; }
 
-  /* case pages: one case per slide */
+  /* case pages: reference layout — pain intro + solution | results */
   .page-case {
-    padding: 16px 22px 12px;
-    gap: 8px;
+    padding: 12px 20px 14px;
+    gap: 6px;
   }
-  .page-case h1 { font-size: 20px; }
-  .page-case .who { font-size: 11.5px; line-height: 1.35; }
-  .case {
+  .page-case h1 { font-size: 17.5px; margin-top: 1px; }
+  .page-case .who { font-size: 11px; line-height: 1.35; }
+  .pain-intro {
+    border: 1px solid var(--gm);
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--gs), #fff 72%);
+    padding: 7px 11px 8px;
+  }
+  .pain-intro .lab {
+    font-size: 11px;
+    font-weight: 750;
+    color: var(--gd);
+    letter-spacing: .06em;
+    margin-bottom: 3px;
+  }
+  .pain-intro .bg {
+    margin: 0 0 5px;
+    font-size: 11.5px;
+    line-height: 1.35;
+    color: var(--ink2);
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+  .pain-grid.four { grid-template-columns: repeat(4, 1fr); }
+  .pain-item {
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 6px;
+    padding: 5px 7px;
+  }
+  .pain-item .n {
+    font-size: 11.5px;
+    font-weight: 750;
+    color: var(--gd);
+    margin-bottom: 2px;
+  }
+  .pain-item p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.3;
+    color: var(--ink2);
+  }
+  .case-main {
     flex: 1;
     min-height: 0;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 9px;
+  }
+  .panel {
     border: 1.5px solid var(--g);
     border-radius: 8px;
     background: #fff;
     display: flex;
     flex-direction: column;
+    min-width: 0;
+    min-height: 0;
     overflow: hidden;
   }
-  .case-hd {
+  .panel-hd {
     background: var(--gd);
     color: #fff;
-    padding: 10px 16px 11px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 16px;
-  }
-  .case-hd .left { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-  .case-hd .no {
-    font-size: 11.5px;
-    letter-spacing: .1em;
-    font-weight: 650;
-    opacity: .88;
-  }
-  .case-hd h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 750;
-    line-height: 1.3;
-  }
-  .case-hd .align {
+    padding: 6px 11px;
     font-size: 12.5px;
-    opacity: .92;
-    white-space: nowrap;
+    font-weight: 750;
+    letter-spacing: .04em;
   }
-  .case-bd {
-    padding: 12px 16px 13px;
+  .panel-bd {
+    padding: 8px 9px 9px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 7px;
     flex: 1;
     min-height: 0;
   }
-  .case-bd .flow-lab {
-    margin: 0;
-    font-size: 12.5px;
-    font-weight: 750;
-    color: var(--g);
-    letter-spacing: .06em;
-  }
-  .flow {
+  .sol-flow {
+    flex: 1;
+    min-height: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    flex: 1;
-    min-height: 0;
+    grid-template-columns: 78px 12px 108px 12px 1fr;
+    gap: 0 4px;
+    align-items: stretch;
   }
-  .flow-step {
+  .sol-col {
     border: 1px solid var(--gm);
-    border-radius: 8px;
+    border-radius: 6px;
     background: #f7fbf8;
-    padding: 12px 14px;
+    padding: 6px 6px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     min-height: 0;
   }
-  .flow-step .ph {
-    font-size: 14px;
+  .sol-col .ttl {
+    font-size: 11px;
     font-weight: 750;
     color: var(--gd);
-    letter-spacing: .06em;
+    text-align: center;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--gm);
   }
-  .flow-step .body {
+  .sol-col .ch {
+    font-size: 11px;
+    color: var(--ink2);
+    background: #fff;
+    border: 1px solid var(--gm);
+    border-radius: 4px;
+    padding: 4px 5px;
+    text-align: center;
+    font-weight: 650;
+    line-height: 1.2;
+  }
+  .sol-col.agents .ch {
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 5px 4px;
+  }
+  .sol-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--g);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .mod-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    flex: 1;
+    min-height: 0;
+  }
+  .mod {
+    border: 1px solid var(--gm);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .mod .mh {
+    background: var(--g);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 750;
+    padding: 3px 7px;
+  }
+  .mod p {
     margin: 0;
-    font-size: 13px;
-    line-height: 1.5;
+    padding: 5px 7px;
+    font-size: 10.5px;
+    line-height: 1.3;
     color: var(--ink2);
     flex: 1;
   }
-  .flow-step .body b { color: var(--ink); font-weight: 700; }
-  .flow-step.out {
-    background: var(--gs);
-    border-color: var(--g);
-  }
-  .flow-step .chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 2px;
-  }
-  .flow-step .chips span {
-    font-size: 12px;
-    font-weight: 650;
+  .res-block .lab {
+    font-size: 11.5px;
+    font-weight: 750;
     color: var(--gd);
-    background: #fff;
-    border: 1px solid var(--gm);
-    border-radius: 3px;
-    padding: 3px 8px;
+    margin-bottom: 2px;
   }
-  .case-note {
+  .res-block p, .res-block ol {
     margin: 0;
-    font-size: 11px;
+    font-size: 11.5px;
+    line-height: 1.35;
+    color: var(--ink2);
+  }
+  .res-block ol {
+    padding-left: 1.1em;
+    display: grid;
+    gap: 3px;
+  }
+  .res-block li b { color: var(--ink); }
+  .metrics {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .metric {
+    background: var(--gs);
+    border: 1px solid var(--g);
+    border-radius: 6px;
+    padding: 7px 6px 6px;
+    text-align: center;
+  }
+  .metric .v {
+    font-size: 18px;
+    font-weight: 750;
+    color: var(--gd);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .metric .l {
+    margin-top: 2px;
+    font-size: 10.5px;
+    line-height: 1.25;
+    color: var(--ink2);
+  }
+  .case-foot {
+    margin: 0;
+    font-size: 10px;
     color: var(--ink3);
-    line-height: 1.4;
+    line-height: 1.3;
   }
 
   .matrix {
@@ -896,121 +994,166 @@
   <header class="top">
     <div>
       <div class="kicker">03　专业案例 · 我对关键问题的拆解</div>
-      <h1>案例一：创作者平台</h1>
+      <h1>创作者平台：公域投放痛点与解决方案</h1>
     </div>
     <div class="who">
       <b>LEAPMOTOR</b>
-      结构：背景 → 问题 → 行动 → 成果<br>
+      案例 01 / 02<br>
       对齐战略 · 提升公域投放效率
     </div>
   </header>
   <hr class="rule">
 
-  <article class="case">
-    <div class="case-hd">
-      <div class="left">
-        <div class="no">案例 01 / 02</div>
-        <h3>面向车主和全体员工的创作者平台</h3>
-      </div>
-      <div class="align">战略对齐 · 提升公域投放效率</div>
+  <div class="pain-intro">
+    <div class="lab">背景与行业 / 业务痛点</div>
+    <p class="bg">2025 年初，公域内容仍依赖人工拉群与表格维护达人 / KOC；车主与员工发帖散落多平台，任务、审核、奖励未产品化。</p>
+    <div class="pain-grid four">
+      <div class="pain-item"><div class="n">痛点 1 · 转化难统计</div><p>公域内容素材带来的转化链路断裂，投放效果难闭环。</p></div>
+      <div class="pain-item"><div class="n">痛点 2 · KOC 难维护</div><p>达人 / KOC 数据靠表格，名单、任务、履约状态难统一管理。</p></div>
+      <div class="pain-item"><div class="n">痛点 3 · 审核与奖励慢</div><p>审核量大、人工处理，奖励发放延迟严重，创作者体验差。</p></div>
+      <div class="pain-item"><div class="n">痛点 4 · 运营效率低</div><p>活动难规模化复制，车主与员工供给无法稳定放大。</p></div>
     </div>
-    <div class="case-bd">
-      <p class="flow-lab">业务流</p>
-      <div class="flow">
-        <div class="flow-step">
-          <div class="ph">背景</div>
-          <p class="body">2025 年初，公域内容仍依赖人工拉群、表格维护达人 / KOC；车主与员工发帖散落在多个社媒平台，任务、审核、奖励链路未产品化，投放侧拿不到稳定、可度量的内容供给。</p>
-        </div>
-        <div class="flow-step">
-          <div class="ph">问题</div>
-          <p class="body">
-            <b>①</b> 公域内容素材的转化难统计；<br>
-            <b>②</b> KOC 数据管理与维护困难；<br>
-            <b>③</b> 审核量大，奖励发放延迟严重；<br>
-            <b>④</b> 运营效率低，难规模化复制。
-          </p>
-        </div>
-        <div class="flow-step">
-          <div class="ph">行动</div>
-          <div class="body">
-            以社媒平台为供给出口，搭建创作者中台：任务、报名、OCR 验真、AI / 人审、申诉、分层配额、奖励发放；并开放车主与全员营销员工在公域发帖获激励。
-            <div class="chips">
-              <span>抖音</span><span>小红书</span><span>汽车之家</span><span>懂车帝</span><span>头条</span><span>微博</span>
+  </div>
+
+  <div class="case-main">
+    <section class="panel">
+      <div class="panel-hd">创作者平台解决方案 · 业务流</div>
+      <div class="panel-bd">
+        <div class="sol-flow">
+          <div class="sol-col">
+            <div class="ttl">用户 / 供给</div>
+            <div class="ch">车主</div>
+            <div class="ch">全体员工<br><em style="font-style:normal;font-weight:500;color:var(--ink3);font-size:10px;">全员营销</em></div>
+            <div class="ch">达人 / KOC</div>
+          </div>
+          <div class="sol-arrow">→</div>
+          <div class="sol-col agents">
+            <div class="ttl">场景能力</div>
+            <div class="ch">发帖任务</div>
+            <div class="ch">审核验真</div>
+            <div class="ch">激励发放</div>
+            <div class="ch">效果归因</div>
+          </div>
+          <div class="sol-arrow">→</div>
+          <div class="sol-col" style="padding:0;background:transparent;border:0;">
+            <div class="mod-grid" style="height:100%;">
+              <div class="mod"><div class="mh">社媒出口</div><p>抖音、小红书、汽车之家、懂车帝、头条、微博——公域发帖统一回流。</p></div>
+              <div class="mod"><div class="mh">任务与激励</div><p>报名、任务、分层配额、奖励发放；员工与车主均可获激励。</p></div>
+              <div class="mod"><div class="mh">审核中台</div><p>OCR 验真 + AI 审贴 + 人审 / 申诉，降低积压与错发。</p></div>
+              <div class="mod"><div class="mh">效果度量</div><p>专题页 uid / openid 溯源、渠道 PV / UV，内容转化可统计。</p></div>
             </div>
           </div>
         </div>
-        <div class="flow-step out">
-          <div class="ph">成果</div>
-          <p class="body">
-            <b>数据成果：</b>公域分发覆盖 6 大平台；2026 创作者相关主投入约 13 份方案，补齐 OCR / 申诉 / AI 审贴 / 分层配额。<br><br>
-            <b>业务成果：</b>从表格运营升级为可审核、可分层、可激励的内容供给中台；车主 + 员工都能在公域发帖获奖励，投放素材供给更稳、回流可溯源。
-          </p>
-        </div>
       </div>
-      <p class="case-note">注：转化类精确数值以业务看板当期口径为准；此处强调链路从不可统计 → 可运营。</p>
-    </div>
-  </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-hd">案例成果 · 数据 + 业务</div>
+      <div class="panel-bd">
+        <div class="res-block">
+          <div class="lab">客户 / 业务痛点（摘要）</div>
+          <p>转化不可见、KOC 难管、审核慢、运营难放大——公域投放缺一条可运营的内容供给链。</p>
+        </div>
+        <div class="res-block">
+          <div class="lab">达成效果描述</div>
+          <ol>
+            <li><b>供给产品化：</b>从表格运营升级为可审核、可分层、可激励的创作者中台。</li>
+            <li><b>人群扩容：</b>车主 + 全员营销员工都能在公域发帖并获奖励，供给更稳。</li>
+            <li><b>投放可闭环：</b>发得出去、回得来，素材效果可溯源，支撑投放决策。</li>
+          </ol>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="v">6</div><div class="l">公域分发平台<br>抖音 / 小红书等</div></div>
+          <div class="metric"><div class="v">13</div><div class="l">2026 创作者主投入<br>方案份数（约）</div></div>
+          <div class="metric"><div class="v">0→1</div><div class="l">平台能力建成<br>审核 / 激励闭环</div></div>
+        </div>
+        <p class="case-foot">注：转化类精确数值以业务看板当期口径为准。</p>
+      </div>
+    </section>
+  </div>
 </section>
 
 <section class="page page-case">
   <header class="top">
     <div>
       <div class="kicker">04　专业案例 · 我对关键问题的拆解</div>
-      <h1>案例二：服务 SCRM</h1>
+      <h1>服务 SCRM：车主服务痛点与解决方案</h1>
     </div>
     <div class="who">
       <b>LEAPMOTOR</b>
-      结构：背景 → 问题 → 行动 → 成果<br>
+      案例 02 / 02<br>
       对齐战略 · 提升车主服务
     </div>
   </header>
   <hr class="rule">
 
-  <article class="case">
-    <div class="case-hd">
-      <div class="left">
-        <div class="no">案例 02 / 02</div>
-        <h3>服务车主的 SCRM：门店与总部管家协同</h3>
-      </div>
-      <div class="align">战略对齐 · 提升车主服务</div>
+  <div class="pain-intro">
+    <div class="lab">背景与业务痛点</div>
+    <p class="bg">售后咨询与跟进长期依赖一对一沟通和个人经验；门店管家、总部管家、服务运营入口割裂，信息不在同一会话，重复咨询与漏跟进并存。</p>
+    <div class="pain-grid">
+      <div class="pain-item"><div class="n">痛点 1 · 车主入口</div><p>车主找不到稳定服务入口，问得到人难、体验碎片化。</p></div>
+      <div class="pain-item"><div class="n">痛点 2 · 门店协同</div><p>门店跟进难协同、难留痕，跨角色靠人肉同步。</p></div>
+      <div class="pain-item"><div class="n">痛点 3 · 服务运营</div><p>权限、自动化与质检难做，重复咨询吃掉管家产能。</p></div>
     </div>
-    <div class="case-bd">
-      <p class="flow-lab">业务流</p>
-      <div class="flow">
-        <div class="flow-step">
-          <div class="ph">背景</div>
-          <p class="body">售后咨询与跟进长期依赖一对一沟通和个人经验；门店管家、总部管家、服务运营各自入口不同，信息不在同一会话里，重复咨询与漏跟进并存。</p>
-        </div>
-        <div class="flow-step">
-          <div class="ph">问题</div>
-          <p class="body">
-            渠道入口割裂，需要产品化解决方案：<br>
-            <b>车主</b>找不到稳定服务入口；<br>
-            <b>门店</b>跟进难协同、难留痕；<br>
-            <b>服务运营</b>难做权限、自动化与质检。<br>
-            要把「问得到、跟得上」做成面向门店与总部管家的 SCRM 系统能力。
-          </p>
-        </div>
-        <div class="flow-step">
-          <div class="ph">行动</div>
-          <div class="body">
-            按三类入口建设服务管家 IM / SCRM：车主侧进入专属服务群；门店 / 总部管家同群协同；服务运营配置权限、自动化与群机器人。
-            <div class="chips">
-              <span>车主入口</span><span>门店管家</span><span>总部管家</span><span>服务运营</span>
+  </div>
+
+  <div class="case-main">
+    <section class="panel">
+      <div class="panel-hd">服务 SCRM 解决方案 · 业务流</div>
+      <div class="panel-bd">
+        <div class="sol-flow">
+          <div class="sol-col">
+            <div class="ttl">渠道入口</div>
+            <div class="ch">车主<br><em style="font-style:normal;font-weight:500;color:var(--ink3);font-size:10px;">APP / 专属群</em></div>
+            <div class="ch">门店管家</div>
+            <div class="ch">总部管家</div>
+            <div class="ch">服务运营</div>
+          </div>
+          <div class="sol-arrow">→</div>
+          <div class="sol-col agents">
+            <div class="ttl">场景能力</div>
+            <div class="ch">自动建群</div>
+            <div class="ch">待办协同</div>
+            <div class="ch">自动化触发</div>
+            <div class="ch">知识问答</div>
+          </div>
+          <div class="sol-arrow">→</div>
+          <div class="sol-col" style="padding:0;background:transparent;border:0;">
+            <div class="mod-grid" style="height:100%;">
+              <div class="mod"><div class="mh">专属服务群</div><p>答不上来自动建群，拉入门店 / 总部管家 / 店长，一对多服务。</p></div>
+              <div class="mod"><div class="mh">运营闭环</div><p>权限、待办、工单留痕；移动端跟进，敏感场景可建单。</p></div>
+              <div class="mod"><div class="mh">五项自动化</div><p>重复咨询与状态触发自动化，把管家时间留给复杂问题。</p></div>
+              <div class="mod"><div class="mh">群机器人</div><p>可独立回复常见问题；充电等场景可接 RAG 知识回答。</p></div>
             </div>
           </div>
         </div>
-        <div class="flow-step out">
-          <div class="ph">成果</div>
-          <p class="body">
-            <b>数据成果：</b>五项自动化立项测算投入 4.4 万 / 22 人天，年收益约 36 万，ROI ≈ 7.1；方案目标响应 5 分钟→2 秒、待办及时率 60%→95%、工单响应 30 分钟→1 分钟。<br><br>
-            <b>业务成果：</b>从「人肉跟进」升级为自动建群 + 一对多专属服务 + 群机器人；门店与总部同屏协同，重复咨询先由系统消化。
-          </p>
-        </div>
       </div>
-      <p class="case-note">注：响应等数字为方案内基线 / 目标或立项测算，答辩时按当期看板校准。</p>
-    </div>
-  </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-hd">案例成果 · 数据 + 业务</div>
+      <div class="panel-bd">
+        <div class="res-block">
+          <div class="lab">客户 / 业务痛点（摘要）</div>
+          <p>入口割裂、协同靠人、重复咨询多——需要把「问得到、跟得上」做成 SCRM 系统能力。</p>
+        </div>
+        <div class="res-block">
+          <div class="lab">达成效果描述</div>
+          <ol>
+            <li><b>入口统一：</b>车主进专属服务群，门店与总部同屏协同。</li>
+            <li><b>服务产品化：</b>自动建群 + 一对多 + 机器人，减少人肉跟进。</li>
+            <li><b>效率可量化：</b>自动化立项测算清晰，响应与待办目标可追踪。</li>
+          </ol>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="v">7.1</div><div class="l">自动化立项 ROI<br>投入 4.4 万 / 22 人天</div></div>
+          <div class="metric"><div class="v">5′→2″</div><div class="l">响应目标<br>覆盖 70% 重复咨询</div></div>
+          <div class="metric"><div class="v">60→95%</div><div class="l">待办及时率目标<br>工单 30′→1′</div></div>
+        </div>
+        <p class="case-foot">注：响应等数字为方案内基线 / 目标或立项测算，答辩时按当期看板校准。</p>
+      </div>
+    </section>
+  </div>
 </section>
 </body>
 </html>
